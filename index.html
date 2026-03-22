@@ -1,9 +1,38 @@
-<!DOCTYPE html>
+<!DOCTYP
+<div class="doc-section" id="sec-exec" style="padding:1.5rem 2rem;background:var(--surface);border:1px solid var(--rule);border-radius:4px;margin-bottom:3rem;max-width:820px;animation:fadeUp .4s ease both">
+  <div style="font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-bottom:1rem;">Executive Summary</div>
+  <p style="font-size:.92rem;color:var(--ink-2);line-height:1.8;margin-bottom:1.25rem;">This document proposes a framework for insuring frontier AI developers against reliability and accountability risks. I develop a risk prioritization methodology, identify liability channels most tractable for insurance, and propose a concrete standard — AIUC-2 — for the Reliability/Accountability risk category.</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem 2rem;">
+    <div>
+      <div style="font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:.5rem;">Sections</div>
+      <div style="font-size:.84rem;line-height:2;">
+        <a href="#sec-1" style="color:var(--ink);text-decoration:none;display:block;">1 &nbsp;·&nbsp; Risk Prioritization</a>
+        <a href="#sec-1-table3" style="color:var(--ink-2);text-decoration:none;display:block;padding-left:1.1rem;font-size:.8rem;">Table 3: Risk Matrix</a>
+        <a href="#sec-2" style="color:var(--ink);text-decoration:none;display:block;">2 &nbsp;·&nbsp; AIUC-2 Standard Proposal</a>
+        <a href="#sec-2-1" style="color:var(--ink-2);text-decoration:none;display:block;padding-left:1.1rem;font-size:.8rem;">2.1 Reporting Cadence</a>
+        <a href="#sec-2-2" style="color:var(--ink-2);text-decoration:none;display:block;padding-left:1.1rem;font-size:.8rem;">2.2 Operating Conditions</a>
+        <a href="#sec-2-3" style="color:var(--ink-2);text-decoration:none;display:block;padding-left:1.1rem;font-size:.8rem;">2.3 Red Lines</a>
+      </div>
+    </div>
+    <div>
+      <div style="font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:.5rem;">Tables</div>
+      <div style="font-size:.84rem;line-height:2;color:var(--ink-2);">
+        <a href="#sec-1" style="color:var(--ink-2);text-decoration:none;display:block;">Table 1 &nbsp;·&nbsp; Risk prioritization criteria (PC1–PC8)</a>
+        <a href="#sec-1" style="color:var(--ink-2);text-decoration:none;display:block;">Table 2 &nbsp;·&nbsp; Liability mechanisms (LM1–LM4)</a>
+        <a href="#sec-1-table3" style="color:var(--ink-2);text-decoration:none;display:block;">Table 3 &nbsp;·&nbsp; Risk matrix — insurability &amp; framework alignment</a>
+        <a href="#sec-2" style="color:var(--ink-2);text-decoration:none;display:block;">Table 4 &nbsp;·&nbsp; AIUC-2 standard for reliability/accountability</a>
+        <a href="#sec-2-2" style="color:var(--ink-2);text-decoration:none;display:block;">Table 5 &nbsp;·&nbsp; Operating conditions (OC1–OC4)</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+E html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AIUC 2 — Risk Prioritization & Standard Pitch</title>
+<title>AIUC-2 — Risk Prioritization & Standard Proposal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -14,7 +43,7 @@
   --mono:'DM Mono',monospace;--serif:'DM Serif Display',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{font-size:15px}
+html{font-size:17px}
 body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.6;min-height:100vh}
 .page{max-width:1640px;margin:0 auto;padding:0 2rem}
 header{padding:4rem 0 3rem;border-bottom:1px solid var(--rule);margin-bottom:3rem;animation:fadeUp .5s ease both}
@@ -39,7 +68,7 @@ h1 em{font-style:italic;color:var(--ink-2)}
 .fsep{width:1px;height:16px;background:var(--rule);margin:0 .2rem}
 .fstatus{font-family:var(--mono);font-size:.58rem;color:var(--ink-3);font-style:italic;margin-left:.4rem}
 .table-scroll{overflow-x:auto;border:1px solid var(--rule);border-radius:4px;background:var(--surface)}
-table{width:100%;border-collapse:collapse;font-size:.73rem;min-width:1420px}
+table{width:100%;border-collapse:collapse;font-size:.8rem;min-width:1420px}
 col.c-risk{width:195px}col.c-stage{width:96px}col.c-bearer{width:90px}col.c-mech{width:82px}
 col.c-ins{width:30px}col.c-sc{width:36px}
 col.c-cov{width:82px}col.c-gap{width:72px}col.c-mkt{width:88px}col.c-fw{width:52px}
@@ -75,7 +104,7 @@ tr.scenario-row td.sn-name{text-align:left;padding-left:2rem;border-left:3px sol
 .sn-primary{font-size:.72rem;font-weight:500;color:var(--ink);line-height:1.3}
 .sn-sub{font-size:.62rem;color:var(--ink-3);margin-top:1px}
 tr.scenario-row.hidden,tr.mechanism-row.hidden{display:none}
-tr.mechanism-row td{padding:0;border-bottom:1px solid var(--rule-2)}
+tr.mechanism-row{display:none!important}tr.mechanism-row td{padding:0;border-bottom:1px solid var(--rule-2)}
 .mech-panel{background:#FAFAF7;border-left:3px solid var(--rule);padding:.75rem 1rem .75rem 2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:.65rem 1.25rem}
 .mech-item{font-size:.67rem}
 .mech-label{font-family:var(--mono);font-size:.55rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-bottom:.18rem}
@@ -119,28 +148,161 @@ footer{margin-top:5rem;padding:2rem 0;border-top:1px solid var(--rule)}
 .fi{display:flex;justify-content:space-between;align-items:center;font-size:.68rem;color:var(--ink-3);font-family:var(--mono)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 </style>
+<style>
+/* ── Document prose styles ───────────────────────────────────────────────── */
+.doc-section{margin-bottom:4rem;animation:fadeUp .5s ease both .1s}
+.doc-section h2{font-family:var(--serif);font-size:1.5rem;font-weight:400;color:var(--ink);margin-bottom:1.25rem;padding-bottom:.75rem;border-bottom:1px solid var(--rule)}
+.doc-section h3{font-family:var(--serif);font-size:1.1rem;font-weight:400;color:var(--ink);margin:2rem 0 .75rem}
+.doc-prose{font-size:.95rem;color:var(--ink-2);line-height:1.8;max-width:820px;margin-bottom:1.25rem}
+.doc-prose a{color:var(--ink);text-decoration:underline;text-underline-offset:2px}
+.doc-prose sup{font-size:.65rem;color:var(--ink-3)}
+.table-caption{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-top:.75rem;margin-bottom:2rem}
+
+/* ── Prioritization criteria table ──────────────────────────────────────── */
+.pc-table{width:100%;border-collapse:collapse;font-size:.88rem;margin-bottom:.5rem;max-width:620px}
+.pc-table th{font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);padding:.4rem .75rem;text-align:left;border-bottom:2px solid var(--ink);font-weight:500}
+.pc-table td{padding:.55rem .75rem;border-bottom:1px solid var(--rule-2);vertical-align:top;color:var(--ink-2)}
+.pc-table td:first-child{font-family:var(--mono);font-size:.7rem;font-weight:500;color:var(--ink);white-space:nowrap}
+.pc-table td:nth-child(2){font-weight:500;color:var(--ink)}
+.pc-bucket{font-family:var(--mono);font-size:.58rem;font-weight:500;padding:2px 6px;border-radius:3px;display:inline-block;white-space:nowrap}
+.pc-1r{background:#E1F5EE;color:#085041}
+.pc-sb{background:#E6F1FB;color:#0C447C}
+
+/* ── Standards table ─────────────────────────────────────────────────────── */
+.std-scroll{overflow-x:auto;border:1px solid var(--rule);border-radius:4px;background:var(--surface);margin-bottom:.5rem}
+.std-table{width:100%;border-collapse:collapse;font-size:.78rem;min-width:1300px}
+.std-table .std-head-group th{font-family:var(--mono);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);padding:.5rem .5rem .2rem;text-align:center;border-bottom:none;font-weight:500;background:var(--surface)}
+.std-table .std-head-sub th{font-family:var(--mono);font-size:.57rem;font-weight:500;color:var(--ink-2);padding:.15rem .4rem .5rem;text-align:center;border-bottom:2px solid var(--ink);vertical-align:bottom;white-space:nowrap;background:var(--surface)}
+.std-head-group .std-group-type{background:#E1F5EE!important;color:#085041!important}
+.std-head-group .std-group-src{background:rgba(26,24,20,.04)!important}
+.std-head-group .std-group-uw{background:#FAEEDA!important;color:#633806!important}
+.std-head-sub .prev{background:#E1F5EE;color:#085041;cursor:help}
+.std-head-sub .det{background:#E6F1FB;color:#0C447C;cursor:help}
+.std-head-sub .bridge{background:#FAEEDA;color:#633806;cursor:help}
+.std-head-sub .mh{background:#EEEDFE;color:#3C3489;cursor:help}
+.std-head-sub .as{background:#FCE8D5;color:#854F0B;cursor:help}
+.std-table th.std-id,.std-table td.std-id{width:62px;text-align:center}
+.std-table th.std-req,.std-table td.std-req{width:160px;font-weight:500;color:var(--ink)}
+.std-table th.std-def,.std-table td.std-def{width:340px;color:var(--ink-2)}
+.std-table th.std-type,.std-table td.std-type{width:38px;text-align:center}
+.std-table th.std-cadence,.std-table td.std-cadence{width:120px;color:var(--ink-3)}
+.std-table th.std-status,.std-table td.std-status{width:80px;text-align:center;font-weight:500}
+.std-table th.std-src,.std-table td.std-src{width:80px;color:var(--ink-3);font-size:.65rem;text-align:center}
+.std-table th.std-uw,.std-table td.std-uw{width:36px;text-align:center}
+.std-table td{padding:.45rem .5rem;border-bottom:1px solid var(--rule-2);vertical-align:top}
+.std-table td.std-id{font-family:var(--mono);font-size:.62rem;font-weight:500;color:var(--ink-3);vertical-align:middle}
+.std-section td{background:#EDEBE5;font-family:var(--mono);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:#444441;padding:.35rem .75rem;border-top:1px solid var(--rule);font-weight:500}
+.std-row:hover td{background:#F8F6F1}
+.mandatory{color:#7A1A10;background:#FAD0CC;border-radius:3px;padding:2px 5px;font-family:var(--mono);font-size:.58rem}
+.optional{color:#2D6A1F;background:#E3F0D8;border-radius:3px;padding:2px 5px;font-family:var(--mono);font-size:.58rem}
+.chk{font-size:.9rem;line-height:1}
+td.prev .chk{color:#085041}
+td.det .chk{color:#0C447C}
+td.bridge .chk{color:#633806}
+td.mh .chk{color:#3C3489}
+td.as .chk{color:#854F0B}
+
+/* ── Operating conditions ────────────────────────────────────────────────── */
+.oc-block{max-width:900px;margin-bottom:2rem}
+.oc-item{display:grid;grid-template-columns:200px 1fr;gap:.5rem 1.5rem;padding:.65rem 0;border-bottom:1px solid var(--rule-2);font-size:.84rem}
+.oc-item:last-child{border-bottom:none}
+.oc-label{font-weight:500;color:var(--ink);padding-top:.05rem}
+.oc-label::before{content:"· ";color:var(--ink-3)}
+.oc-body{color:var(--ink-2);line-height:1.65}
+
+/* ── Frequency box ───────────────────────────────────────────────────────── */
+.freq-box{max-width:820px;margin-bottom:1.5rem;font-size:.84rem;color:var(--ink-2);line-height:1.75}
+.freq-box strong{color:var(--ink);font-weight:500}
+
+/* ── Footnotes ───────────────────────────────────────────────────────────── */
+.footnotes{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--rule);font-size:.75rem;color:var(--ink-3);max-width:820px;line-height:1.7}
+.footnotes a{color:var(--ink-3)}
+</style>
 </head>
 <body>
-<div class="page">
+<div class="doc-section" id="sec-1">
+  <h2>1. Risk Prioritization</h2>
 
-<header>
-  <div class="eyebrow">AIUC-2 &nbsp;·&nbsp; Working Document</div>
-  <h1>Risk Prioritization<br>and <em>Standard Pitch</em></h1>
-  <div class="header-meta">
-    <div class="meta-item"><strong>Version</strong>0.2 — Internal Draft</div>
-    <div class="meta-item"><strong>Scope</strong>Frontier AI Developer Insurance</div>
-    <div class="meta-item"><strong>Taxonomy</strong>Risk category × claimant × loss bearer</div>
-    <div class="meta-item"><strong>Updated</strong>March 2026</div>
+  <p class="doc-prose">I evaluate a broad and inexhaustive set of risks, drawing from risk taxonomies in the EU AI Act Codes of Practice, RAISE, SB 53, OpenAI RSP, DeepMind FSF, and Anthropic RSP as well as those outlined in <a href="https://www.aiuc-1.com/">AIUC-1</a>. I grade each risk on a scale of 1–6 across eight prioritization criteria (PC) (Table 1), which fall into two buckets: <strong>First Round (1R)</strong> criteria, or whether a risk is sufficiently legible, bounded, and claimable to support early insurance products for frontier developers; and <strong>Strategic Bridge (SB)</strong> criteria, or whether insuring a risk helps generate the controls, data, and pricing infrastructure needed to later underwrite more diffuse, systemic, and/or catastrophic risks. This approach leverages early insurance of risks that fulfill 1R criteria in order to improve AIUC's ability to model, price, and make legible more diffuse risks via SB criteria.</p>
+
+  <table class="pc-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Prioritization Criteria</th>
+        <th>Bucket</th>
+        <th>Definition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>PC1</td><td>Trigger reliability</td><td><span class="pc-bucket pc-1r">1R</span></td><td>Is the event clearly defined and verifiable?</td></tr>
+      <tr><td>PC2</td><td>Attribution</td><td><span class="pc-bucket pc-1r">1R</span></td><td>Can responsibility be assigned to a specific actor?</td></tr>
+      <tr><td>PC3</td><td>Loss basis</td><td><span class="pc-bucket pc-1r">1R</span></td><td>Can harm be valued using a workable loss measure?</td></tr>
+      <tr><td>PC4</td><td>Tail / correlation</td><td><span class="pc-bucket pc-1r">1R</span></td><td>Is the risk sufficiently bounded and diversifiable?</td></tr>
+      <tr><td>PC5</td><td>Claimant legibility</td><td><span class="pc-bucket pc-1r">1R</span></td><td>Are harmed parties identifiable with a viable private claim path?</td></tr>
+      <tr><td>PC6</td><td>Control tractability</td><td><span class="pc-bucket pc-sb">SB</span></td><td>Can underwriting and audits materially reduce hidden risk?</td></tr>
+      <tr><td>PC7</td><td>Data / standardization maturity</td><td><span class="pc-bucket pc-sb">SB</span></td><td>Is there enough precedent, taxonomy, and data to price the risk?</td></tr>
+      <tr><td>PC8</td><td>Control leverage</td><td><span class="pc-bucket pc-sb">SB</span></td><td>Would insurance drive better controls &amp; useful underwriting data?</td></tr>
+    </tbody>
+  </table>
+  <p class="table-caption">Table 1: Risk prioritization criteria</p>
+
+  <p class="doc-prose" style="margin-top:1.25rem;">Table 2 outlines several liability mechanisms (LM1–LM4) through which claims against frontier labs could flow, directly linked to PC5 (claimant legibility) and related to PC1 (trigger reliability) and PC2 (attribution). Regulatory enforcement is included because frameworks like the EU AI Act Code of Practice create pre-assigned liability that can anchor defense cost cover and compliance failure products, even where fines flow to authorities rather than victims.</p>
+
+  <div style="border:1px solid var(--rule);border-radius:4px;background:var(--surface);overflow:hidden;max-width:860px;margin-bottom:.5rem;">
+    <table style="width:100%;border-collapse:collapse;font-size:.82rem;">
+      <thead>
+        <tr style="border-bottom:2px solid var(--ink);">
+          <th style="font-family:var(--mono);font-size:.62rem;font-weight:500;color:var(--ink-2);padding:.6rem .9rem;text-align:center;width:48px;">#</th>
+          <th style="font-family:var(--mono);font-size:.62rem;font-weight:500;color:var(--ink-2);padding:.6rem .9rem;text-align:left;">Mechanism</th>
+          <th style="font-family:var(--mono);font-size:.62rem;font-weight:500;color:var(--ink-2);padding:.6rem .9rem;text-align:center;">Compensation to harmed party?</th>
+          <th style="font-family:var(--mono);font-size:.62rem;font-weight:500;color:var(--ink-2);padding:.6rem .9rem;text-align:center;">Pre-assigned liability?</th>
+          <th style="font-family:var(--mono);font-size:.62rem;font-weight:500;color:var(--ink-2);padding:.6rem .9rem;text-align:left;">Insurance trigger implication</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid var(--rule-2);background:#F0FBF6;">
+          <td style="padding:.65rem .9rem;font-family:var(--mono);font-size:.68rem;font-weight:500;color:var(--ink-3);text-align:center;">LM1</td>
+          <td style="padding:.65rem .9rem;font-weight:500;">Contract</td>
+          <td style="padding:.65rem .9rem;text-align:center;"><span class="mb mb-yes">Yes</span></td>
+          <td style="padding:.65rem .9rem;text-align:center;"><span class="mb mb-pre">Pre-assigned</span></td>
+          <td style="padding:.65rem .9rem;font-size:.78rem;color:var(--ink-2);">Cleanest trigger. Payout metric contractually defined; no causation proof required. <strong>Primary channel for AIUC-2.</strong> Scores 5–6 on trigger reliability.</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--rule-2);background:#F0F7FF;">
+          <td style="padding:.65rem .9rem;font-family:var(--mono);font-size:.68rem;font-weight:500;color:var(--ink-3);text-align:center;">LM2</td>
+          <td style="padding:.65rem .9rem;font-weight:500;">Regulatory enforcement</td>
+          <td style="padding:.65rem .9rem;text-align:center;"><span class="mb mb-no">No — goes to regulator</span></td>
+          <td style="padding:.65rem .9rem;text-align:center;"><span class="mb mb-pre">Pre-assigned</span></td>
+          <td style="padding:.65rem .9rem;font-size:.78rem;color:var(--ink-2);">Cannot anchor a victim-compensation product, but anchors defense cost cover and compliance failure products. EU AIA CoP and GDPR provide the clearest statutory bases. <strong>Secondary channel for AIUC-2.</strong></td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--rule-2);">
+          <td style="padding:.65rem .9rem;font-family:var(--mono);font-size:.68rem;font-weight:500;color:var(--ink-3);text-align:center;">LM3</td>
+          <td style="padding:.65rem .9rem;font-weight:500;">Statute + private right of action</td>
+          <td style="padding:.65rem .9rem;text-align:center;"><span class="mb mb-yes">Yes</span></td>
+          <td style="padding:.65rem .9rem;text-align:center;"><span class="mb mb-pre">Pre-assigned</span></td>
+          <td style="padding:.65rem .9rem;font-size:.78rem;color:var(--ink-2);">Liability basis predefined but payout not automatic — proof of violation, standing, and harm still required. Scores 3–5 depending on how contested these elements are.</td>
+        </tr>
+        <tr>
+          <td style="padding:.65rem .9rem;font-family:var(--mono);font-size:.68rem;font-weight:500;color:var(--ink-3);text-align:center;">LM4</td>
+          <td style="padding:.65rem .9rem;font-weight:500;">Tort</td>
+          <td style="padding:.65rem .9rem;text-align:center;"><span class="mb mb-yes">Yes — if successful</span></td>
+          <td style="padding:.65rem .9rem;text-align:center;"><span class="mb mb-post">Post-hoc only</span></td>
+          <td style="padding:.65rem .9rem;font-size:.78rem;color:var(--ink-2);">Generally weak trigger. Requires proving duty, breach, causation, and damage — all contested for AI in most contexts. Scores 1–3.</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-</header>
+  <p class="table-caption">Table 2: Liability mechanisms (LM1–LM4). AIUC-2 standards are designed to work primarily through LM1 (contract) and LM2 (regulatory enforcement).</p>
 
+  <p class="doc-prose" style="margin-top:1.25rem;">The risk matrix (Table 3) outlines the prioritization exercise. I calculate 1R and SB scores as the mean of respective criteria; a 50/50 weighted score of 1R and SB means; and an unweighted mean across all eight criteria. This exercise is a rapid synthesis rather than a final framework. Scores should be validated by insurers, tort/product liability practitioners, and AI safety governance specialists before deployment, and category weights could be further refined using actuarial and pricing-model inputs.</p>
+</div>
+
+<div class="page">
 <div class="section">
   <div class="section-header">
     <span class="section-label">§1</span>
-    <span class="section-title">Risk Matrix — Insurability, Coverage &amp; Framework Alignment</span>
+    <span class="section-title" id="sec-1-table3">Table 3: Risk Matrix — Insurability &amp; Framework Alignment</span>
   </div>
-  <div class="disclaimer-note">⚠ Working estimates — Existing coverage, Coverage gap, and Market readiness columns reflect informed judgment based on publicly available information (Lloyd's market reports, specialist AI insurer filings, legal reporting) and require validation against current policy forms and underwriter guidance before use in any formal analysis.</div>
-  <div style="font-size:.72rem;color:var(--ink-3);margin-bottom:1rem;">Click a group row to expand scenarios. Click a scenario row to reveal liability mechanism. Click 1R / SB / Wtd / Unwtd column headers to sort. Hover chips and dots for criteria text.</div>
 
   <div class="filter-bar">
     <span class="filter-label">Filter by governance function:</span>
@@ -162,12 +324,10 @@ footer{margin-top:5rem;padding:2rem 0;border-top:1px solid var(--rule)}
   <div class="table-scroll">
   <table id="main-table">
     <colgroup>
-      <col class="c-risk"><col class="c-mech">
-      <col class="c-ins gi"><col class="c-ins gi"><col class="c-ins gi"><col class="c-ins gi">
+      <col class="c-risk"><col class="c-ins gi"><col class="c-ins gi"><col class="c-ins gi"><col class="c-ins gi">
       <col class="c-ins gi"><col class="c-ins gi"><col class="c-ins gi"><col class="c-ins gi">
             <col class="c-sc gs"><col class="c-sc gs"><col class="c-sc gs"><col class="c-sc gs">
-      <col class="c-cov gc"><col class="c-gap gc"><col class="c-mkt gc">
-      <col class="c-fw gf"><col class="c-fw gf"><col class="c-fw gf">
+      <col class="c-cov gc"><col class="c-gap gc"><col class="c-fw gf"><col class="c-fw gf"><col class="c-fw gf">
       <col class="c-fw gf"><col class="c-fw gf"><col class="c-fw gf">
     </colgroup>
     <thead>
@@ -193,8 +353,6 @@ footer{margin-top:5rem;padding:2rem 0;border-top:1px solid var(--rule)}
         <th class="gs htip sortable" data-sort="wtd" data-tip="Weighted composite — 1R (50%) + SB (50%). Equal weight reflects that near-term insurability and strategic market-building value are both objectives. Click to sort.">Wtd ↕</th>
         <th class="gs htip sortable" data-sort="uwtd" data-tip="Unweighted mean across all 8 dimensions. Click to sort.">Un&#x2011;wtd ↕</th>
         <th class="gc htip" data-tip="Existing coverage — which standard policy lines currently cover or are being extended to cover this risk. Cyber = cyber liability; E&O = errors & omissions / tech liability; PL = products liability; D&O = directors & officers; IP = IP indemnity.">Existing<br>coverage</th>
-        <th class="gc htip" data-tip="Coverage confidence — how reliably does current policy language actually respond to this risk? High = policy responds with reasonable certainty. Partial = significant exclusions or ambiguity in current language. Low = no current policy responds. Contested = coverage claimed but actively litigated.">Coverage<br>conf.</th>
-        <th class="gc htip" data-tip="Underwriting maturity — how developed is the market for this risk? Writing now = active market with pricing data. Piloting = limited products, limited data. Exploring = underwriter interest but no product. No market = not currently written. Govt backstop = requires public/government capacity.">Underwriting<br>maturity</th>
         <th class="gf htip" data-tip="EU GPAI Code of Practice. Dots show governance functions (a–j) addressed. Hover a cell for detail.">EU GPAI</th>
         <th class="gf htip" data-tip="California SB 53 — catastrophic risk safety protocol law.">SB 53</th>
         <th class="gf htip" data-tip="US RAISE Act — federal AI safety legislation.">RAISE</th>
@@ -220,21 +378,7 @@ footer{margin-top:5rem;padding:2rem 0;border-top:1px solid var(--rule)}
       </div>
       <div style="font-size:.63rem;color:var(--ink-3);line-height:1.6;">6 = high insurability<br>4–5 = partial / needs design<br>1–3 = low / uninsurable</div>
     </div>
-    <div class="lg">
-      <h4>Coverage gap</h4>
-      <div class="li"><span class="gap-badge gap-covered">Covered</span>Policy responds reliably</div>
-      <div class="li"><span class="gap-badge gap-partial">Partial gap</span>Significant exclusions</div>
-      <div class="li"><span class="gap-badge gap-none">No coverage</span>No policy responds</div>
-      <div class="li"><span class="gap-badge gap-contested">Contested</span>Actively disputed</div>
-    </div>
-    <div class="lg">
-      <h4>Market readiness</h4>
-      <div class="li"><span class="mkt-badge mkt-writing">Writing now</span>Active market</div>
-      <div class="li"><span class="mkt-badge mkt-piloting">Piloting</span>Limited products</div>
-      <div class="li"><span class="mkt-badge mkt-exploring">Exploring</span>Interest, no product</div>
-      <div class="li"><span class="mkt-badge mkt-none">No market</span>Not currently written</div>
-      <div class="li"><span class="mkt-badge mkt-govt">Govt backstop</span>Requires public capacity</div>
-    </div>
+
     <div class="lg">
       <h4>Framework dots</h4>
       <div class="li"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#1A6B35;flex-shrink:0;margin-top:4px;"></span>Expressly covered</div>
@@ -247,10 +391,7 @@ footer{margin-top:5rem;padding:2rem 0;border-top:1px solid var(--rule)}
       <h4>Governance functions</h4>
       <div style="font-size:.63rem;color:var(--ink-2);line-height:1.8;">a · identify / inventory<br>b · thresholds / tiers<br>c · evals / testing<br>d · mitigations<br>e · deployment gates<br>f · incident reporting<br>g · 3rd-party review<br>h · transparency<br>i · weight security<br>j · governance</div>
     </div>
-    <div class="lg">
-      <h4>Liability mechanisms</h4>
-      <div style="font-size:.63rem;color:var(--ink-2);line-height:1.7;">Click any scenario row<br>to expand mechanism detail:<br>type · compensation flow<br>pre-assignment · claimant<br>loss bearer chain · lever</div>
-    </div>
+
     <div class="lg">
       <h4>Scores</h4>
       <div class="li"><span class="ls">1R</span>First Round — near-term insurability (dims 1–5)</div>
@@ -262,59 +403,500 @@ footer{margin-top:5rem;padding:2rem 0;border-top:1px solid var(--rule)}
 </div>
 </div>
 
-<div class="page">
-<div class="section" style="animation-delay:.2s;">
-  <div class="section-header">
-    <span class="section-label">§2</span>
-    <span class="section-title">Liability mechanisms as forcing functions</span>
+
+<div class="tooltip" id="tooltip"><div class="tl" id="tl"></div><div class="ts" id="ts"></div><div class="tb" id="tb"></div></div>
+
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     SECTION 2 — AIUC-2 STANDARD PROPOSAL
+     ══════════════════════════════════════════════════════════════════════ -->
+<p class="doc-prose" style="margin-bottom:3rem;">The mapping reveals the Reliability/Accountability categories as a promising starting point for an AIUC-2 standard. Capability/systemic risks are least insurable, due to unclear repercussions, challenges in tracking and verification of events, and diffuse liability.</p>
+
+<div class="doc-section" id="sec-2">
+  <h2>2. AIUC-2 Standard Proposal</h2>
+
+  <p class="doc-prose">I build an AIUC-2 standard addressing the category of Reliability/Accountability (Table 4). AIUC-2 actions draw from AIUC-1, the EU AI Act Codes of Practice, and frontier lab safety frameworks, drawing from <a href="https://aigi.ox.ac.uk/wp-content/uploads/2025/07/Comparing-EU-AI-Act-Code-of-Practice-Safety-and-Security-Requirements-with-Industry-Precedent-15-July-2025.pdf">Stelling et al. (2025)</a>. Future iterations of this standard could further draw from legislation like NY's RAISE and CA's SB 53; as well as standards upon which AIUC-1 builds, including CSA AICM, OWASP Top 10 for LLM Applications, MITRE ATLAS, OWASP AIVSS, NIST AI RMF, and IBM AI Risk Atlas. Given time constraints, the EU AIA CoP is a compelling guiding force for a first iteration given its relatively binding nature and its near-term enforcement.</p>
+
+  <p class="doc-prose">AIUC-2 actions fall into three distinct categories building from AIUC-1:</p>
+
+  <div class="oc-block" style="margin-bottom:1.5rem">
+    <div class="oc-item">
+      <span class="oc-label" style="font-family:var(--mono);font-size:.75rem;background:#E1F5EE;color:#085041;padding:2px 6px;border-radius:3px;align-self:start;margin-top:.15rem">Preventative</span>
+      <span class="oc-body">Reduces probability of a covered event occurring.</span>
+    </div>
+    <div class="oc-item">
+      <span class="oc-label" style="font-family:var(--mono);font-size:.75rem;background:#E6F1FB;color:#0C447C;padding:2px 6px;border-radius:3px;align-self:start;margin-top:.15rem">Deterministic</span>
+      <span class="oc-body">Produces objective measurable data that feeds pricing and risk modeling for insured risks.</span>
+    </div>
+    <div class="oc-item">
+      <span class="oc-label" style="font-family:var(--mono);font-size:.75rem;background:#FAEEDA;color:#633806;padding:2px 6px;border-radius:3px;align-self:start;margin-top:.15rem">Bridge</span>
+      <span class="oc-body">Builds data and infrastructure to price harder, currently uninsurable risks.</span>
+    </div>
   </div>
-  <div style="max-width:820px;">
-    <p style="font-size:.82rem;color:var(--ink-2);line-height:1.75;margin-bottom:1rem;">The four liability mechanisms in the table — contract, statute + private right of action, tort, and regulatory enforcement — differ on two dimensions that directly determine insurance tractability: whether compensation flows to the harmed party, and whether liability is pre-assigned or requires post-hoc proof.</p>
-    <p style="font-size:.82rem;color:var(--ink-2);line-height:1.75;margin-bottom:1rem;">Contract produces the cleanest triggers — liability is pre-assigned, payout is deterministic, and no causation proof is required beyond the contractual metric. Statute + private right of action predetermines the liability basis but still requires proof of violation, standing, and harm, making triggers stronger than tort but not as clean as contract. Tort assigns liability entirely post-hoc and requires proving duty, breach, causation, and damage — all contested for AI in most contexts, though specific sectors (medical, financial advice, product-integrated agentic systems) may become more tractable as doctrine develops. Regulatory enforcement predetermines liability but routes fines to the regulator rather than the victim — it cannot anchor a victim-compensation product, but can anchor defense cost cover, regulatory response costs, and compliance failure products.</p>
-    <p style="font-size:.82rem;color:var(--ink-2);line-height:1.75;">The implication for standard design is that requirements which create contractual or statutory obligations — rather than leaving harmed parties to pursue tort — are the primary lever for converting currently uninsurable risks into insurable ones. The scores in this table reflect current legal conditions; scenarios where the mechanism column shows Contract or Statute+PRA are not necessarily already insurable, but they have the structural foundation that makes insurability achievable with the right standard design.</p>
+
+  <p class="doc-prose">Together, actions within these categories foster both near-term insurability and long-term market building. Bridge actions in particular offer incentives complementary to existing frameworks (e.g. EU AIA CoP, frontier safety frameworks) to generate structured and standardized incident data, logs, and infrastructure to support AIUC in incrementally pricing, modeling, and insuring against systemic and catastrophic risks. Insured parties can opt into bridge actions for a discounted rate. The pitch to labs: by taking advantage of an additional set of optional standards, you can capitalize on existing compliance obligations for a lower premium.</p>
+
+  <div class="std-scroll">
+    <table class="std-table">
+<thead>
+<tr class="std-head-group">
+  <th rowspan="2" class="std-id">ID</th>
+  <th rowspan="2" class="std-req">Requirement</th>
+  <th rowspan="2" class="std-def">Definition</th>
+  <th colspan="3" class="std-group-type">Type</th>
+  <th rowspan="2" class="std-cadence">Cadence</th>
+  <th rowspan="2" class="std-status">Status</th>
+  <th colspan="3" class="std-group-src">Source</th>
+</tr>
+<tr class="std-head-sub">
+  <th class="std-type prev" title="Reduces probability of a covered event occurring">Prev.</th>
+  <th class="std-type det" title="Produces objective measurable data for pricing and risk modeling">Det.</th>
+  <th class="std-type bridge" title="Builds infrastructure to price harder, currently uninsurable risks">Bridge</th>
+  <th class="std-src" title="AIUC-1 reference">AIUC-1</th>
+  <th class="std-src" title="EU AI Act Code of Practice reference">CoP</th>
+  <th class="std-src" title="Lab RSP / FSF reference">RSP/FSF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="std-section"><td colspan="13">Section 1 — Reliability &amp; Availability</td></tr>
+<tr class="std-row">
+  <td class="std-id">H2-001</td>
+  <td class="std-req">Independent uptime monitoring</td>
+  <td class="std-def">AIUC-approved third-party service measures availability, error rate, and P95 latency on covered endpoints. Insurer has direct API read access at all times. Lab cannot be the sole source of any availability metric.</td>
+  <td class="std-type prev"></td>
+  <td class="std-type det"><span class='chk'>✓</span></td>
+  <td class="std-type bridge"></td>
+  <td class="std-cadence">Continuous</td>
+  <td class="std-status mandatory">Mandatory</td>
+  <td class="std-src">—</td>
+  <td class="std-src">—</td>
+  <td class="std-src">—</td>
+</tr>
+<tr class="std-row">
+  <td class="std-id">H2-002</td>
+  <td class="std-req">Covered endpoint declaration</td>
+  <td class="std-def">Lab declares all primary API endpoints in scope at inception; new endpoints notified within 30 days. Undisclosed endpoints excluded from coverage.</td>
+  <td class="std-type prev"></td>
+  <td class="std-type det"><span class='chk'>✓</span></td>
+  <td class="std-type bridge"></td>
+  <td class="std-cadence">At inception + on change</td>
+  <td class="std-status mandatory">Mandatory</td>
+  <td class="std-src">—</td>
+  <td class="std-src">—</td>
+  <td class="std-src">—</td>
+</tr>
+<tr class="std-row">
+  <td class="std-id">H2-003</td>
+  <td class="std-req">Enterprise contract disclosure</td>
+  <td class="std-def">All enterprise contracts with uptime commitments submitted to AIUC. AIUC approves against its minimum SLA floor schedule. Commitments exceeding the policy floor are the lab's uninsured residual exposure.</td>
+  <td class="std-type prev"><span class='chk'>✓</span></td>
+  <td class="std-type det"></td>
+  <td class="std-type bridge"></td>
+  <td class="std-cadence">At inception + on new contract</td>
+  <td class="std-status mandatory">Mandatory</td>
+  <td class="std-src">—</td>
+  <td class="std-src">—</td>
+  <td class="std-src">—</td>
+</tr>
+<tr class="std-row">
+  <td class="std-id">H2-004</td>
+  <td class="std-req">SLA availability thresholds</td>
+  <td class="std-def">Three-tier threshold structure set per-lab at inception based on the lab's baseline availability data: Tier 1 (notification), Tier 2 (remediation plan within 14 days), Tier 3 (immediate AIUC review and potential coverage suspension). Specific percentage values are placeholders pending AIUC portfolio data; provisional thresholds agreed at policy inception and reviewed annually. [Placeholder: T1 = TBD%, T2 = TBD%, T3 = TBD%]</td>
+  <td class="std-type prev"></td>
+  <td class="std-type det"><span class='chk'>✓</span></td>
+  <td class="std-type bridge"></td>
+  <td class="std-cadence">Continuous</td>
+  <td class="std-status mandatory">Mandatory</td>
+  <td class="std-src">—</td>
+  <td class="std-src">II.12</td>
+  <td class="std-src">—</td>
+</tr>
+<tr class="std-row">
+  <td class="std-id">H2-005</td>
+  <td class="std-req">Benchmark suite declaration</td>
+  <td class="std-def">Lab and AIUC jointly agree on named publicly reproducible evaluations with version-locked methodology and countersigned baseline scores at inception. Covers both performance (drift) and factual accuracy (hallucination) domains. Suite cannot be modified without mutual written agreement.</td>
+  <td class="std-type prev"></td>
+  <td class="std-type det"><span class='chk'>✓</span></td>
+  <td class="std-type bridge"></td>
+  <td class="std-cadence">At inception + on renewal</td>
+  <td class="std-status mandatory">Mandatory</td>
+  <td class="std-src">—</td>
+  <td class="std-src">II.2</td>
+  <td class="std-src">—</td>
+</tr>
+<tr class="std-row">
+  <td class="std-id">H2-006</td>
+  <td class="std-req">Benchmark evaluation and reporting</td>
+  <td class="std-def">Full agreed benchmark suite run and results submitted to AIUC in structured format. Triggered on every model version change (within 24 hours of deployment) and on a fixed quarterly cadence. Deployments without submitted evaluation results are not covered.</td>
+  <td class="std-type prev"><span class='chk'>✓</span></td>
+  <td class="std-type det"><span class='chk'>✓</span></td>
+  <td class="std-type bridge"><span class='chk'>✓</span></td>
+  <td class="std-cadence">Per version change AND quarterly</td>
+  <td class="std-status mandatory">Mandatory</td>
+  <td class="std-src">D001–D002</td>
+  <td class="std-src">II.2</td>
+  <td class="std-src">SB 53 §3 · RAISE §4</td>
+</tr>
+<tr class="std-row">
+  <td class="std-id">H2-007</td>
+  <td class="std-req">Benchmark notification threshold</td>
+  <td class="std-def">Benchmark score declines beyond the notification threshold on any agreed evaluation, sustained across 2 or more consecutive runs. Triggers mandatory AIUC disclosure within 48 hours. Applies to both performance (drift) and factual accuracy (hallucination) benchmark suites. Single-run declines that recover do not constitute a notification event. [Placeholder: notification threshold = TBD% decline from baseline, set per-lab at inception]</td>
+  <td class="std-type prev"></td>
+  <td class="std-type det"><span class='chk'>✓</span></td>
+  <td class="std-type bridge"></td>
+  <td class="std-cadence">Per eval cycle</td>
+  <td class="std-status mandatory">Mandatory</td>
+  <td class="std-src">D001–D002</td>
+  <td class="std-src">II.2</td>
+  <td class="std-src">—</td>
+</tr>
+<tr class="std-row">
+  <td class="std-id">H2-008</td>
+  <td class="std-req">Benchmark material failure threshold</td>
+  <td class="std-def">Benchmark score declines beyond the material failure threshold on any agreed evaluation, OR falls below the agreed absolute floor, sustained across 2 or more consecutive runs. Triggers mandatory remediation plan submitted to AIUC within 30 days. Applies to both performance and factual accuracy suites. [Placeholder: material threshold = TBD% decline from baseline; absolute floor = TBD, both set per-lab at inception]</td>
+  <td class="std-type prev"></td>
+  <td class="std-type det"><span class='chk'>✓</span></td>
+  <td class="std-type bridge"></td>
+  <td class="std-cadence">Per eval cycle</td>
+  <td class="std-status mandatory">Mandatory</td>
+  <td class="std-src">D001–D002</td>
+  <td class="std-src">II.2</td>
+  <td class="std-src">—</td>
+</tr>
+<tr class="std-row">
+  <td class="std-id">H2-009</td>
+  <td class="std-req">Unannounced spot evaluation</td>
+  <td class="std-def">AIUC or its accredited assessor may initiate a full benchmark run at any time without notice. Lab must cooperate within 48 hours. Results count equally with scheduled evaluations. Closes the strategic rollback loophole whereby labs game the scheduled cadence.</td>
+  <td class="std-type prev"><span class='chk'>✓</span></td>
+  <td class="std-type det"><span class='chk'>✓</span></td>
+  <td class="std-type bridge"></td>
+  <td class="std-cadence">Ad hoc (AIUC-initiated)</td>
+  <td class="std-status mandatory">Mandatory</td>
+  <td class="std-src">B001 · C010–C012 · D002</td>
+  <td class="std-src">II.11</td>
+  <td class="std-src">—</td>
+</tr>
+<tr class="std-section"><td colspan="13">Section 2 — Accountability &amp; Transparency</td></tr>
+<tr class="std-row">
+  <td class="std-id">H2-010</td>
+  <td class="std-req">Model activity logging</td>
+  <td class="std-def">All covered endpoint outputs logged: timestamp, model version, session ID, input hash. PII-scrubbed; 12-month minimum retention; retrievable by AIUC within 48 hours of a coverage event.</td>
+  <td class="std-type prev"></td>
+  <td class="std-type det"><span class='chk'>✓</span></td>
+  <td class="std-type bridge"><span class='chk'>✓</span></td>
+  <td class="std-cadence">Continuous</td>
+  <td class="std-status mandatory">Mandatory</td>
+  <td class="std-src">E015</td>
+  <td class="std-src">II.8</td>
+  <td class="std-src">SB 53 §3 · EU Art. 19</td>
+</tr>
+<tr class="std-row">
+  <td class="std-id">H2-011</td>
+  <td class="std-req">Incident structured log</td>
+  <td class="std-def">Structured report submitted within 7 days of resolution for any Tier 2+ event: timestamp, duration, tier breached, root cause (AIUC taxonomy), affected endpoints, estimated affected customer count, remediation taken.</td>
+  <td class="std-type prev"></td>
+  <td class="std-type det"><span class='chk'>✓</span></td>
+  <td class="std-type bridge"><span class='chk'>✓</span></td>
+  <td class="std-cadence">Per incident</td>
+  <td class="std-status mandatory">Mandatory</td>
+  <td class="std-src">E001–E003</td>
+  <td class="std-src">II.12</td>
+  <td class="std-src">SB 53 §6 · EU Art. 73</td>
+</tr>
+<tr class="std-row">
+  <td class="std-id">H2-012</td>
+  <td class="std-req">Serious incident reporting</td>
+  <td class="std-def">Tier 3 breaches, security incidents, and warranty breaches reported to AIUC within 24 hours of detection, prior to resolution. Deferral pending internal investigation not permitted.</td>
+  <td class="std-type prev"></td>
+  <td class="std-type det"></td>
+  <td class="std-type bridge"></td>
+  <td class="std-cadence">Per incident</td>
+  <td class="std-status mandatory">Mandatory</td>
+  <td class="std-src">E001</td>
+  <td class="std-src">II.12</td>
+  <td class="std-src">EU Art. 73</td>
+</tr>
+<tr class="std-row">
+  <td class="std-id">H2-013</td>
+  <td class="std-req">AI failure response plans</td>
+  <td class="std-def">Documented response plans for: (a) security breaches, (b) harmful outputs, (c) hallucination events. Each covers detection, escalation, AIUC notification, customer communication, and remediation. Updated annually.</td>
+  <td class="std-type prev"><span class='chk'>✓</span></td>
+  <td class="std-type det"></td>
+  <td class="std-type bridge"></td>
+  <td class="std-cadence">Annual</td>
+  <td class="std-status mandatory">Mandatory</td>
+  <td class="std-src">E001–E003</td>
+  <td class="std-src">II.6</td>
+  <td class="std-src">—</td>
+</tr>
+<tr class="std-row">
+  <td class="std-id">H2-014</td>
+  <td class="std-req">Named accountability officer</td>
+  <td class="std-def">Lab designates a named AIUC Compliance Officer with authority to commit the lab to remediation obligations. Updated within 14 days of any change.</td>
+  <td class="std-type prev"><span class='chk'>✓</span></td>
+  <td class="std-type det"></td>
+  <td class="std-type bridge"></td>
+  <td class="std-cadence">At inception + on change</td>
+  <td class="std-status mandatory">Mandatory</td>
+  <td class="std-src">E004</td>
+  <td class="std-src">II.10</td>
+  <td class="std-src">—</td>
+</tr>
+<tr class="std-row">
+  <td class="std-id">H2-015</td>
+  <td class="std-req">Third-party component disclosure</td>
+  <td class="std-def">All third-party AI components in coverage scope documented annually. Must meet equivalent AIUC requirements or be explicitly excluded. Material changes notified within 30 days.</td>
+  <td class="std-type prev"><span class='chk'>✓</span></td>
+  <td class="std-type det"></td>
+  <td class="std-type bridge"></td>
+  <td class="std-cadence">Annual + on change</td>
+  <td class="std-status mandatory">Mandatory</td>
+  <td class="std-src">E006</td>
+  <td class="std-src">II.10</td>
+  <td class="std-src">—</td>
+</tr>
+<tr class="std-row">
+  <td class="std-id">H2-016</td>
+  <td class="std-req">Regulatory compliance documentation</td>
+  <td class="std-def">Compliance status with EU AI Act, SB 53, RAISE, and applicable equivalents maintained. Material regulatory findings or enforcement actions disclosed within 30 days.</td>
+  <td class="std-type prev"><span class='chk'>✓</span></td>
+  <td class="std-type det"></td>
+  <td class="std-type bridge"></td>
+  <td class="std-cadence">Annual + on change</td>
+  <td class="std-status mandatory">Mandatory</td>
+  <td class="std-src">E012</td>
+  <td class="std-src">II.14</td>
+  <td class="std-src">SB 53 · RAISE</td>
+</tr>
+<tr class="std-row">
+  <td class="std-id">H2-017</td>
+  <td class="std-req">Model card and capability disclosure</td>
+  <td class="std-def">Model card in AIUC schema updated within 30 days of any material change. Required fields: capability claims, eval methodology, known failure modes, intended and out-of-scope uses. Constitutes a warranted representation.</td>
+  <td class="std-type prev"><span class='chk'>✓</span></td>
+  <td class="std-type det"><span class='chk'>✓</span></td>
+  <td class="std-type bridge"></td>
+  <td class="std-cadence">Per material change</td>
+  <td class="std-status mandatory">Mandatory</td>
+  <td class="std-src">E017</td>
+  <td class="std-src">II.8 · II.16</td>
+  <td class="std-src">EU Art. 13</td>
+</tr>
+<tr class="std-row">
+  <td class="std-id">H2-018</td>
+  <td class="std-req">Pre-deployment testing documentation</td>
+  <td class="std-def">Pre-deployment testing against agreed benchmark suite documented before any model version change. Results submitted with version-change notification. Undocumented deployments not covered.</td>
+  <td class="std-type prev"><span class='chk'>✓</span></td>
+  <td class="std-type det"></td>
+  <td class="std-type bridge"></td>
+  <td class="std-cadence">Per version change</td>
+  <td class="std-status mandatory">Mandatory</td>
+  <td class="std-src">C002</td>
+  <td class="std-src">II.2</td>
+  <td class="std-src">SB 53 §3 · RAISE §4</td>
+</tr>
+<tr class="std-section"><td colspan="13">Section 3 — Optional: Bridge Data Sharing</td></tr>
+<tr class="std-row">
+  <td class="std-id">H2-023</td>
+  <td class="std-req">Dangerous capability probe results</td>
+  <td class="std-def">CBRN uplift, offensive cyber, and persuasion/manipulation eval results shared with AIUC under NDA on version-change and quarterly cadence. Pass/fail and score vs. threshold only; raw prompts not shared.</td>
+  <td class="std-type prev"></td>
+  <td class="std-type det"><span class='chk'>✓</span></td>
+  <td class="std-type bridge"><span class='chk'>✓</span></td>
+  <td class="std-cadence">Per version change + quarterly</td>
+  <td class="std-status optional">Optional</td>
+  <td class="std-src">B001 · C010</td>
+  <td class="std-src">II.2 · II.3 · II.5</td>
+  <td class="std-src">SB 53 §3 · RAISE §4 · Anthropic RSP · OAI RSP · GDM FSF</td>
+</tr>
+<tr class="std-row">
+  <td class="std-id">H2-024</td>
+  <td class="std-req">Capability trajectory reporting</td>
+  <td class="std-def">Quarterly structured summary of capability scores across agreed domains over prior four model versions. Enables AIUC to price rate of capability change, not just current level.</td>
+  <td class="std-type prev"></td>
+  <td class="std-type det"><span class='chk'>✓</span></td>
+  <td class="std-type bridge"><span class='chk'>✓</span></td>
+  <td class="std-cadence">Quarterly</td>
+  <td class="std-status optional">Optional</td>
+  <td class="std-src">—</td>
+  <td class="std-src">II.2 · II.4</td>
+  <td class="std-src">Anthropic RSP · OAI RSP · GDM FSF</td>
+</tr>
+<tr class="std-row">
+  <td class="std-id">H2-025</td>
+  <td class="std-req">Refusal and safety filter telemetry</td>
+  <td class="std-def">Aggregate refusal counts by category (CBRN, cyber, harmful content, self-harm, other) shared monthly. No content shared. Enables portfolio-level base rate estimation for capability and harmful output risks.</td>
+  <td class="std-type prev"></td>
+  <td class="std-type det"><span class='chk'>✓</span></td>
+  <td class="std-type bridge"><span class='chk'>✓</span></td>
+  <td class="std-cadence">Monthly</td>
+  <td class="std-status optional">Optional</td>
+  <td class="std-src">C007–C008</td>
+  <td class="std-src">II.4</td>
+  <td class="std-src">EU Art. 9 · RAISE §5</td>
+</tr>
+<tr class="std-row">
+  <td class="std-id">H2-026</td>
+  <td class="std-req">Annual red team summary</td>
+  <td class="std-def">Annual adversarial testing by AIUC-accredited assessor. Structured summary under NDA: domains tested, severity distribution, prior-year remediation status. Raw attack content not shared.</td>
+  <td class="std-type prev"><span class='chk'>✓</span></td>
+  <td class="std-type det"><span class='chk'>✓</span></td>
+  <td class="std-type bridge"><span class='chk'>✓</span></td>
+  <td class="std-cadence">Annual</td>
+  <td class="std-status optional">Optional</td>
+  <td class="std-src">B001 · C010–C012</td>
+  <td class="std-src">II.6 · II.7 · II.11</td>
+  <td class="std-src">SB 53 §5 · RAISE §6 · EU Art. 9</td>
+</tr>
+<tr class="std-row">
+  <td class="std-id">H2-027</td>
+  <td class="std-req"></td>
+  <td class="std-def"></td>
+  <td class="std-type prev"></td>
+  <td class="std-type det"></td>
+  <td class="std-type bridge"></td>
+  <td class="std-cadence"></td>
+  <td class="std-status optional"></td>
+  <td class="std-src"></td>
+  <td class="std-src"></td>
+  <td class="std-src"></td>
+</tr>
+<tr class="std-row">
+  <td class="std-id">H2-028</td>
+  <td class="std-req">Agentic action logs</td>
+  <td class="std-def">For agentic deployments: aggregate monthly statistics on tool calls, scope adherence, outcomes, and human approval rates. No individual session content shared.</td>
+  <td class="std-type prev"></td>
+  <td class="std-type det"><span class='chk'>✓</span></td>
+  <td class="std-type bridge"><span class='chk'>✓</span></td>
+  <td class="std-cadence">Monthly</td>
+  <td class="std-status optional">Optional</td>
+  <td class="std-src">B006 · D003–D004</td>
+  <td class="std-src">II.2</td>
+  <td class="std-src">SB 53 §3 · RAISE §4</td>
+</tr>
+<tr class="std-section"><td colspan="13">Section 4 — Governance Framework</td></tr>
+<tr class="std-row">
+  <td class="std-id">H2-029</td>
+  <td class="std-req">Safety and security framework</td>
+  <td class="std-def">Lab maintains a documented board-level safety and security framework covering governance structure, escalation paths, and accountability for AI risk. Submitted to AIUC at inception and reviewed annually.</td>
+  <td class="std-type prev"><span class='chk'>✓</span></td>
+  <td class="std-type det"></td>
+  <td class="std-type bridge"><span class='chk'>✓</span></td>
+  <td class="std-cadence">Annual</td>
+  <td class="std-status mandatory">Mandatory</td>
+  <td class="std-src">—</td>
+  <td class="std-src">II.1</td>
+  <td class="std-src">Anthropic RSP · OAI RSP · GDM FSF</td>
+</tr>
+<tr class="std-row">
+  <td class="std-id">H2-030</td>
+  <td class="std-req">Systemic risk identification methodology</td>
+  <td class="std-def">Lab documents its methodology for identifying which model capabilities constitute systemic risks at each version change. Findings submitted to AIUC as part of version-change notification.</td>
+  <td class="std-type prev"><span class='chk'>✓</span></td>
+  <td class="std-type det"><span class='chk'>✓</span></td>
+  <td class="std-type bridge"><span class='chk'>✓</span></td>
+  <td class="std-cadence">Per version change</td>
+  <td class="std-status mandatory">Mandatory</td>
+  <td class="std-src">C001</td>
+  <td class="std-src">II.3</td>
+  <td class="std-src">SB 53 §3 · RAISE §4 · Anthropic RSP · OAI RSP · GDM FSF</td>
+</tr>
+<tr class="std-row">
+  <td class="std-id">H2-031</td>
+  <td class="std-req">Risk acceptance determination process</td>
+  <td class="std-def">Lab documents the criteria, evidence, and named individual or committee with authority to accept systemic risks above defined thresholds. Submitted at inception and updated on each version change.</td>
+  <td class="std-type prev"><span class='chk'>✓</span></td>
+  <td class="std-type det"><span class='chk'>✓</span></td>
+  <td class="std-type bridge"><span class='chk'>✓</span></td>
+  <td class="std-cadence">Per version change</td>
+  <td class="std-status mandatory">Mandatory</td>
+  <td class="std-src">—</td>
+  <td class="std-src">II.5</td>
+  <td class="std-src">Anthropic RSP · OAI RSP · GDM FSF</td>
+</tr>
+<tr class="std-row">
+  <td class="std-id">H2-032</td>
+  <td class="std-req">Non-retaliation policy</td>
+  <td class="std-def">Lab maintains a documented non-retaliation policy for individuals reporting AI safety concerns internally or to external bodies including AIUC. Submitted at inception; updated on material change.</td>
+  <td class="std-type prev"><span class='chk'>✓</span></td>
+  <td class="std-type det"></td>
+  <td class="std-type bridge"></td>
+  <td class="std-cadence">At inception + on change</td>
+  <td class="std-status mandatory">Mandatory</td>
+  <td class="std-src">—</td>
+  <td class="std-src">II.13</td>
+  <td class="std-src">—</td>
+</tr>
+</tbody></table>
   </div>
-  <div style="margin-top:1.5rem;border:1px solid var(--rule);border-radius:4px;background:var(--surface);overflow:hidden;">
-    <table style="width:100%;border-collapse:collapse;font-size:.73rem;">
+  <p class="table-caption">Table 4: AIUC-2 standard for Reliability/Accountability. MH = moral hazard control; AS = adverse selection control. Hover column headers for definitions.</p>
+
+  <h3 id="sec-2-1">2.1 Reporting Cadence</h3>
+
+  <div class="freq-box">
+    An insured party shall report to AIUC on a tiered schedule based on reporting burden and purpose. <strong>Continuous reporting</strong> — including uptime monitoring telemetry, output logs, and real-time incident alerts — shall be maintained at all times and made accessible to AIUC as specified in Table 4. <strong>Event-triggered reporting</strong> — including version-change evaluations, benchmark results, and incident structured logs — shall be submitted within the timeframes specified in Table 4, prior to or immediately following any material modification or covered event. <strong>Periodic reporting</strong> — including scheduled benchmark evaluations, capability trajectory summaries, refusal telemetry, and red team summaries — shall be submitted at least quarterly or annually as specified, and prior to deployment following any material modification. <strong>High-burden assessments</strong> — including human uplift studies, large-scale expert studies, and third-party audits — shall be conducted prior to initial deployment, when a material modification could reasonably affect the validity of prior results, and at least annually absent such a modification.<sup>1</sup>
+  </div>
+
+  <h3 id="sec-2-2">2.2 Operating Conditions</h3>
+  <p class="doc-prose">The following policy terms apply to all covered risks and sit outside the requirements schedule. They are structural features of the insurance contract designed to counter moral hazard (MH) and adverse selection (AS).</p>
+
+  <div style="border:1px solid var(--rule);border-radius:4px;background:var(--surface);overflow:hidden;max-width:960px;margin-bottom:1.5rem;">
+    <table style="width:100%;border-collapse:collapse;font-size:.82rem;">
       <thead>
         <tr style="border-bottom:2px solid var(--ink);">
-          <th style="font-family:var(--mono);font-size:.58rem;font-weight:500;color:var(--ink-2);padding:.6rem .9rem;text-align:left;">Mechanism</th>
-          <th style="font-family:var(--mono);font-size:.58rem;font-weight:500;color:var(--ink-2);padding:.6rem .9rem;text-align:center;">Compensation to harmed party?</th>
-          <th style="font-family:var(--mono);font-size:.58rem;font-weight:500;color:var(--ink-2);padding:.6rem .9rem;text-align:center;">Pre-assigned liability?</th>
-          <th style="font-family:var(--mono);font-size:.58rem;font-weight:500;color:var(--ink-2);padding:.6rem .9rem;text-align:left;">Insurance trigger implication</th>
+          <th style="font-family:var(--mono);font-size:.62rem;font-weight:500;color:var(--ink-2);padding:.6rem .9rem;text-align:left;width:180px;">#</th>
+          <th style="font-family:var(--mono);font-size:.62rem;font-weight:500;color:var(--ink-2);padding:.6rem .9rem;text-align:left;">Description</th>
+          <th style="font-family:var(--mono);font-size:.62rem;font-weight:500;color:#3C3489;padding:.6rem .5rem;text-align:center;width:48px;background:#EEEDFE;" title="Reduces risk that coverage weakens the lab's incentive to prevent losses">MH</th>
+          <th style="font-family:var(--mono);font-size:.62rem;font-weight:500;color:#854F0B;padding:.6rem .5rem;text-align:center;width:48px;background:#FCE8D5;" title="Reduces risk that labs with worse profiles preferentially seek coverage">AS</th>
         </tr>
       </thead>
       <tbody>
         <tr style="border-bottom:1px solid var(--rule-2);">
-          <td style="padding:.6rem .9rem;font-weight:500;">Contract</td>
-          <td style="padding:.6rem .9rem;text-align:center;"><span class="mb mb-yes">Yes</span></td>
-          <td style="padding:.6rem .9rem;text-align:center;"><span class="mb mb-pre">Pre-assigned</span></td>
-          <td style="padding:.6rem .9rem;font-size:.7rem;color:var(--ink-2);">Cleanest trigger. Payout metric contractually defined; no causation proof required. Scores 5–6 on trigger reliability.</td>
+          <td style="padding:.65rem .9rem;font-weight:500;">OC1 · Co-insurance retention</td>
+          <td style="padding:.65rem .9rem;color:var(--ink-2);">Lab retains a fixed share of every loss, regardless of claim size, tier, or cause. Cannot be reduced through purchase of additional coverage from AIUC or any affiliate.</td>
+          <td style="padding:.65rem .5rem;text-align:center;background:#EEEDFE;"><span style="color:#3C3489;font-size:1rem;">✓</span></td>
+          <td style="padding:.65rem .5rem;text-align:center;background:#FCE8D5;"></td>
         </tr>
         <tr style="border-bottom:1px solid var(--rule-2);">
-          <td style="padding:.6rem .9rem;font-weight:500;">Statute + private right of action</td>
-          <td style="padding:.6rem .9rem;text-align:center;"><span class="mb mb-yes">Yes</span></td>
-          <td style="padding:.6rem .9rem;text-align:center;"><span class="mb mb-pre">Pre-assigned</span></td>
-          <td style="padding:.6rem .9rem;font-size:.7rem;color:var(--ink-2);">Liability basis is predefined by law, but payout is not automatically clean. Proof of violation, standing, and harm (or statutory eligibility) still required. Scores 3–5 depending on how contested these elements are.</td>
+          <td style="padding:.65rem .9rem;font-weight:500;">OC2 · Annual aggregate cap</td>
+          <td style="padding:.65rem .9rem;color:var(--ink-2);">Coverage ends once the annual limit is exhausted; higher limits cost more. The aggregate limit is set at inception based on covered enterprise exposure.</td>
+          <td style="padding:.65rem .5rem;text-align:center;background:#EEEDFE;"><span style="color:#3C3489;font-size:1rem;">✓</span></td>
+          <td style="padding:.65rem .5rem;text-align:center;background:#FCE8D5;"><span style="color:#854F0B;font-size:1rem;">✓</span></td>
         </tr>
         <tr style="border-bottom:1px solid var(--rule-2);">
-          <td style="padding:.6rem .9rem;font-weight:500;">Tort</td>
-          <td style="padding:.6rem .9rem;text-align:center;"><span class="mb mb-yes">Yes — if successful</span></td>
-          <td style="padding:.6rem .9rem;text-align:center;"><span class="mb mb-post">Post-hoc only</span></td>
-          <td style="padding:.6rem .9rem;font-size:.7rem;color:var(--ink-2);">Generally weak trigger for AI. Requires proving duty, breach, causation, and damage — all contested. May become more tractable in specific sectors (medical, financial advice, product-integrated agentic systems). Scores 1–3 in general AI contexts.</td>
+          <td style="padding:.65rem .9rem;font-weight:500;">OC3 · Seasoning period</td>
+          <td style="padding:.65rem .9rem;color:var(--ink-2);">New labs start with partial coverage; full limits begin only after 6 compliant months. A Tier 2 or above breach during the seasoning period restarts the clock.</td>
+          <td style="padding:.65rem .5rem;text-align:center;background:#EEEDFE;"></td>
+          <td style="padding:.65rem .5rem;text-align:center;background:#FCE8D5;"><span style="color:#854F0B;font-size:1rem;">✓</span></td>
         </tr>
         <tr>
-          <td style="padding:.6rem .9rem;font-weight:500;">Regulatory enforcement</td>
-          <td style="padding:.6rem .9rem;text-align:center;"><span class="mb mb-no">No — goes to regulator</span></td>
-          <td style="padding:.6rem .9rem;text-align:center;"><span class="mb mb-pre">Pre-assigned</span></td>
-          <td style="padding:.6rem .9rem;font-size:.7rem;color:var(--ink-2);">Weak basis for victim compensation. Fine goes to authority. Cannot anchor a victim-compensation product — but can anchor defense cost cover, regulatory response costs, and compliance failure products where lawful.</td>
+          <td style="padding:.65rem .9rem;font-weight:500;">OC4 · Experience-rated renewal</td>
+          <td style="padding:.65rem .9rem;color:var(--ink-2);">Renewal pricing adjusts based on breach frequency and severity, benchmark trajectory across four quarters, the delta between announced and unannounced evaluation results, remediation speed, and exposure changes.</td>
+          <td style="padding:.65rem .5rem;text-align:center;background:#EEEDFE;"><span style="color:#3C3489;font-size:1rem;">✓</span></td>
+          <td style="padding:.65rem .5rem;text-align:center;background:#FCE8D5;"><span style="color:#854F0B;font-size:1rem;">✓</span></td>
         </tr>
       </tbody>
     </table>
   </div>
-</div>
-</div><div class="page"><div class="fi"><span>AIUC-2 · Working Document · v0.2</span><span>Internal use only · March 2026</span></div></div></footer>
-<div class="tooltip" id="tooltip"><div class="tl" id="tl"></div><div class="ts" id="ts"></div><div class="tb" id="tb"></div></div>
+  <p class="table-caption">Table 5: Operating conditions to protect against moral hazard (MH) and adverse selection (AS).</p>
 
+  <h3 id="sec-2-3">2.3 Red Lines</h3>
+  <p class="doc-prose">The following constitute coverage-voiding warranty breaches. Any claim arising during a period in which a red line was in effect is excluded from coverage, regardless of whether the breach was disclosed.</p>
+  <div class="oc-block">
+    <div class="oc-item"><span class="oc-label">Monitoring circumvented</span><span class="oc-body">Uptime monitoring infrastructure manipulated, bypassed, or not operational.</span></div>
+    <div class="oc-item"><span class="oc-label">Eval results falsified</span><span class="oc-body">Benchmark evaluation results falsified, withheld, or submitted more than 48 hours late following a version change.</span></div>
+    <div class="oc-item"><span class="oc-label">Undisclosed enterprise contracts</span><span class="oc-body">Enterprise contracts with SLA commitments not disclosed to AIUC within 30 days of signing.</span></div>
+    <div class="oc-item"><span class="oc-label">Uncovered deployment</span><span class="oc-body">Model version deployed without the required pre-deployment evaluation results submitted to AIUC.</span></div>
+    <div class="oc-item"><span class="oc-label">Serious incident not reported</span><span class="oc-body">Serious incident not reported to AIUC within 24 hours of detection, prior to resolution.</span></div>
+    <div class="oc-item"><span class="oc-label">Capability threshold not disclosed</span><span class="oc-body">Dangerous capability threshold crossed and not disclosed to AIUC within the required notification window. Applies regardless of whether the lab has elected optional bridge requirements — if the lab conducts any capability evaluation and identifies a threshold breach, disclosure is mandatory.</span></div>
+  </div>
+
+</div>
+
+<div class="footnotes">
+  <p><sup>1</sup> This approach is broadly consistent with existing frontier safety frameworks and emerging regulation. It aligns with OpenAI's Preparedness Framework, which requires reevaluation for new or updated deployments with a plausible chance of reaching a relevant capability threshold; with Google DeepMind's Frontier Safety Framework, which uses continuous testing at a fixed cadence and when a significant capability jump is detected; and with the EU AI Act Code of Practice, which requires updates when prior safety justifications are materially undermined and at least every six months for the most capable models.</p>
+</div>
+
+</div>
 <script>
 const FNS=['a','b','c','d','e','f','g','h','i','j'];
 const FN_FULL={a:'identify / inventory',b:'thresholds / tiers',c:'evals / testing',d:'mitigations / safeguards',e:'deployment gates',f:'incident reporting',g:'third-party review',h:'transparency',i:'weight security',j:'governance'};
@@ -568,7 +1150,7 @@ GROUPS.forEach(g=>{
     <td class="pr-name" colspan="2"><span class="toggle-icon">▶</span>${g.name}</td>
     <td class="pr-meta gi" colspan="8">hover chips · click row to expand scenarios</td>
     <td class="pr-meta gs" colspan="4">${g.scenarios.length} scenario${g.scenarios.length>1?'s':''}</td>
-    <td class="pr-meta gc" colspan="3"></td>
+    <td class="pr-meta gc" colspan="1"></td>
     <td class="pr-meta gf" colspan="6"></td>
   </tr>`;
   g.scenarios.forEach(sc=>{
