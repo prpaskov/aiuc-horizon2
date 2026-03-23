@@ -142,14 +142,14 @@ footer{margin-top:5rem;padding:2rem 0;border-top:1px solid var(--rule)}
 /* ── Standards table ─────────────────────────────────────────────────────── */
 .std-scroll{overflow-x:auto;border:1px solid var(--rule);border-radius:4px;background:var(--surface);margin-bottom:.5rem}
 .std-table{width:100%;border-collapse:collapse;font-size:.78rem;min-width:1300px}
-.std-table .std-head-group th{font-family:var(--mono);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);padding:.5rem .5rem .2rem;text-align:center;border-bottom:none;font-weight:500;background:var(--surface)}
-.std-table .std-head-sub th{font-family:var(--mono);font-size:.57rem;font-weight:500;color:var(--ink-2);padding:.15rem .4rem .5rem;text-align:center;border-bottom:2px solid var(--ink);vertical-align:bottom;white-space:nowrap;background:var(--surface)}
-.std-head-group .std-group-type{background:#E1F5EE!important;color:#085041!important}
-.std-head-group .std-group-src{background:rgba(26,24,20,.04)!important}
+.std-table .std-head-group th{font-family:var(--mono);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);padding:.5rem .5rem .2rem;text-align:center;border-bottom:none;font-weight:500;background:#F2EFE8}
+.std-table .std-head-sub th{font-family:var(--mono);font-size:.57rem;font-weight:500;color:var(--ink-2);padding:.15rem .4rem .5rem;text-align:center;border-bottom:2px solid var(--ink);vertical-align:bottom;white-space:nowrap;background:#F7F5F0}
+.std-head-group .std-group-type{color:var(--ink-3)!important}
+.std-head-group .std-group-src{background:#F2EFE8!important}
 .std-head-group .std-group-uw{background:#FAEEDA!important;color:#633806!important}
-.std-head-sub .prev{background:#E1F5EE;color:#085041;cursor:help}
-.std-head-sub .det{background:#E6F1FB;color:#0C447C;cursor:help}
-.std-head-sub .bridge{background:#FAEEDA;color:#633806;cursor:help}
+.std-head-sub .prev{color:#085041;cursor:help}
+.std-head-sub .det{color:#0C447C;cursor:help}
+.std-head-sub .bridge{color:#633806;cursor:help}
 .std-head-sub .mh{background:#EEEDFE;color:#3C3489;cursor:help}
 .std-head-sub .as{background:#FCE8D5;color:#854F0B;cursor:help}
 .std-table th.std-id,.std-table td.std-id{width:62px;text-align:center}
@@ -188,6 +188,8 @@ td.as .chk{color:#854F0B}
 /* ── Footnotes ───────────────────────────────────────────────────────────── */
 .footnotes{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--rule);font-size:.75rem;color:var(--ink-3);max-width:820px;line-height:1.7}
 .footnotes a{color:var(--ink-3)}
+.table-label{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-weight:500;margin-bottom:.4rem;margin-top:2.5rem;display:block}
+.table-title{font-family:var(--serif);font-size:1.1rem;font-weight:400;color:var(--ink);margin-bottom:.75rem;margin-top:.25rem}
 </style>
 </head>
 <body>
@@ -222,6 +224,8 @@ td.as .chk{color:#854F0B}
 
   <p class="doc-prose">I evaluate a broad and inexhaustive set of risks, drawing from risk taxonomies in the EU AI Act Codes of Practice, RAISE, SB 53, OpenAI RSP, DeepMind FSF, and Anthropic RSP as well as those outlined in <a href="https://www.aiuc-1.com/">AIUC-1</a>. I grade each risk on a scale of 1–6 across eight prioritization criteria (PC) (Table 1), which fall into two buckets: <strong>First Round (1R)</strong> criteria, or whether a risk is sufficiently legible, bounded, and claimable to support early insurance products for frontier developers; and <strong>Strategic Bridge (SB)</strong> criteria, or whether insuring a risk helps generate the controls, data, and pricing infrastructure needed to later underwrite more diffuse, systemic, and/or catastrophic risks. This approach leverages early insurance of risks that fulfill 1R criteria in order to improve AIUC's ability to model, price, and make legible more diffuse risks via SB criteria.</p>
 
+  <p class="table-label">Table 1</p>
+  <p class="table-title">Risk prioritization criteria (PC1–PC8)</p>
   <div style="background:var(--surface);border:1px solid var(--rule);border-radius:4px;overflow:hidden;max-width:620px;margin-bottom:.5rem;">
   <table class="pc-table" style="margin-bottom:0;">
     <thead>
@@ -244,9 +248,10 @@ td.as .chk{color:#854F0B}
     </tbody>
   </table>
   </div>
-  <p class="table-caption">Table 1: Risk prioritization criteria</p>
 
-  <p class="doc-prose" style="margin-top:1.25rem;">Table 2 outlines several liability mechanisms (LM1–LM4) through which claims against frontier labs could flow, directly linked to PC5 (claimant legibility) and related to PC1 (trigger reliability) and PC2 (attribution). Regulatory enforcement is included because frameworks like the EU AI Act Code of Practice create pre-assigned liability that can anchor defense cost cover and compliance failure products, even where fines flow to authorities rather than victims.</p>
+  <p class="table-label">Table 2</p>
+  <p class="table-title">Liability mechanisms (LM1–LM4)</p>
+  <p class="doc-prose" style="margin-top:0;">Table 2 outlines several liability mechanisms (LM1–LM4) through which claims against frontier labs could flow, directly linked to PC5 (claimant legibility) and related to PC1 (trigger reliability) and PC2 (attribution). Regulatory enforcement is included because frameworks like the EU AI Act Code of Practice create pre-assigned liability that can anchor defense cost cover and compliance failure products, even where fines flow to authorities rather than victims.</p>
 
   <div style="border:1px solid var(--rule);border-radius:4px;background:var(--surface);overflow-x:auto;margin-bottom:.5rem;">
     <table style="width:100%;border-collapse:collapse;font-size:.82rem;">
@@ -291,7 +296,6 @@ td.as .chk{color:#854F0B}
       </tbody>
     </table>
   </div>
-  <p class="table-caption">Table 2: Liability mechanisms (LM1–LM4). AIUC-2 standards are designed to work primarily through LM1 (contract) and LM2 (regulatory enforcement).</p>
 
   <p class="doc-prose" style="margin-top:1.25rem;">The risk matrix (Table 3) outlines the prioritization exercise. I calculate 1R and SB scores as the mean of respective criteria; a 50/50 weighted score of 1R and SB means; and an unweighted mean across all eight criteria. This exercise is a rapid synthesis rather than a final framework. Scores should be validated by insurers, tort/product liability practitioners, and AI safety governance specialists before deployment, and category weights could be further refined using actuarial and pricing-model inputs.</p>
 </div>
@@ -300,7 +304,8 @@ td.as .chk{color:#854F0B}
 <div class="section">
   <div class="section-header">
     <span class="section-label">§1</span>
-    <span class="section-title" id="sec-1-table3">Table 3: Risk Matrix — Insurability &amp; Framework Alignment</span>
+    <span class="section-label">Table 3</span>
+    <span class="section-title" id="sec-1-table3">Risk Matrix — Insurability &amp; Framework Alignment</span>
   </div>
 
   <div class="filter-bar">
@@ -407,381 +412,413 @@ td.as .chk{color:#854F0B}
 
   <p class="doc-prose">I build an AIUC-2 standard addressing the category of Reliability/Accountability (Table 4). AIUC-2 actions draw from AIUC-1, the EU AI Act Codes of Practice, and frontier lab safety frameworks, as mapped by <a href="https://aigi.ox.ac.uk/wp-content/uploads/2025/07/Comparing-EU-AI-Act-Code-of-Practice-Safety-and-Security-Requirements-with-Industry-Precedent-15-July-2025.pdf">Stelling et al. (2025)</a>. Future iterations of this standard could further draw from legislation like NY's RAISE and CA's SB 53; as well as standards upon which AIUC-1 builds, including CSA AICM, OWASP Top 10 for LLM Applications, MITRE ATLAS, OWASP AIVSS, NIST AI RMF, and IBM AI Risk Atlas. Given time constraints, the EU AIA CoP is a compelling guiding force for a first iteration given its relatively binding nature and its near-term enforcement timeline.</p>
 
-  <p class="doc-prose">AIUC-2 actions strategically fall into three distinct categories, building from AIUC-1:</p>
+  <p class="doc-prose">AIUC-2 actions strategically fall into three distinct categories — referred to as action categories (AC) — building from AIUC-1:</p>
 
-  <div class="oc-block" style="margin-bottom:1.5rem">
-    <div class="oc-item">
-      <span class="oc-label" style="font-family:var(--mono);font-size:.75rem;background:#E1F5EE;color:#085041;padding:2px 6px;border-radius:3px;align-self:start;margin-top:.15rem">Preventative</span>
-      <span class="oc-body">Reduces probability of a covered event occurring.</span>
-    </div>
-    <div class="oc-item">
-      <span class="oc-label" style="font-family:var(--mono);font-size:.75rem;background:#E6F1FB;color:#0C447C;padding:2px 6px;border-radius:3px;align-self:start;margin-top:.15rem">Deterministic</span>
-      <span class="oc-body">Produces objective measurable data that feeds pricing and risk modeling for insured risks.</span>
-    </div>
-    <div class="oc-item">
-      <span class="oc-label" style="font-family:var(--mono);font-size:.75rem;background:#FAEEDA;color:#633806;padding:2px 6px;border-radius:3px;align-self:start;margin-top:.15rem">Bridge</span>
-      <span class="oc-body">Builds data and infrastructure to price harder, currently uninsurable risks.</span>
-    </div>
+  <p class="table-label">Table 4</p>
+  <p class="table-title">Action categories (AC1–AC3)</p>
+  <div style="background:var(--surface);border:1px solid var(--rule);border-radius:4px;overflow:hidden;max-width:820px;margin-bottom:1.5rem;">
+    <table style="width:100%;border-collapse:collapse;font-size:.88rem;">
+      <thead>
+        <tr style="border-bottom:2px solid var(--ink);background:#F2EFE8;">
+          <th style="font-family:var(--mono);font-size:.62rem;font-weight:500;color:var(--ink-2);padding:.55rem .9rem;text-align:center;width:60px;">#</th>
+          <th style="font-family:var(--mono);font-size:.62rem;font-weight:500;color:var(--ink-2);padding:.55rem .9rem;text-align:left;width:160px;">Category</th>
+          <th style="font-family:var(--mono);font-size:.62rem;font-weight:500;color:var(--ink-2);padding:.55rem .9rem;text-align:left;">Definition</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid var(--rule-2);">
+          <td style="padding:.65rem .9rem;font-family:var(--mono);font-size:.68rem;font-weight:500;color:var(--ink-3);text-align:center;">AC1</td>
+          <td style="padding:.65rem .9rem;font-weight:500;">Preventative</td>
+          <td style="padding:.65rem .9rem;color:var(--ink-2);">Reduces probability of a covered event occurring.</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--rule-2);">
+          <td style="padding:.65rem .9rem;font-family:var(--mono);font-size:.68rem;font-weight:500;color:var(--ink-3);text-align:center;">AC2</td>
+          <td style="padding:.65rem .9rem;font-weight:500;">Deterministic</td>
+          <td style="padding:.65rem .9rem;color:var(--ink-2);">Produces objective measurable data that feeds pricing and risk modeling for insured risks.</td>
+        </tr>
+        <tr>
+          <td style="padding:.65rem .9rem;font-family:var(--mono);font-size:.68rem;font-weight:500;color:var(--ink-3);text-align:center;">AC3</td>
+          <td style="padding:.65rem .9rem;font-weight:500;">Bridge</td>
+          <td style="padding:.65rem .9rem;color:var(--ink-2);">Builds data and infrastructure to price harder, currently uninsurable risks.</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
   <p class="doc-prose">Together, actions within these categories foster both near-term insurability and long-term market building. Bridge actions in particular offer incentives complementary to existing frameworks (e.g. EU AIA CoP, frontier safety frameworks) to generate structured and standardized incident data, logs, and infrastructure to support AIUC in incrementally pricing, modeling, and insuring against systemic and catastrophic risks. Insured parties can opt into bridge actions for a discounted rate. The pitch to labs: by taking advantage of an additional set of optional standards, you can capitalize on existing compliance obligations for a lower premium.</p>
 
-  <div class="std-scroll" style="background:var(--surface);">
+  <p class="table-label">Table 5</p>  <p class="table-title">AIUC-2 standard for Reliability/Accountability</p>
+  <div class="std-scroll" style="background:var(--surface);border:1px solid var(--rule);border-radius:4px;">
     <table class="std-table">
 <thead>
 <tr class="std-head-group">
-  <th rowspan="2" class="std-id">ID</th>
+  <th rowspan="2" class="std-id">#</th>
   <th rowspan="2" class="std-req">Requirement</th>
   <th rowspan="2" class="std-def">Definition</th>
-  <th colspan="3" class="std-group-type">Type</th>
+  <th colspan="3" class="std-group-type" style="color:var(--ink-3)!important;background:#F2EFE8!important;">Action category</th>
   <th rowspan="2" class="std-status">Status</th>
   <th colspan="3" class="std-group-src">Source</th>
 </tr>
 <tr class="std-head-sub">
-  <th class="std-type prev" title="Reduces probability of a covered event occurring">Prev.</th>
-  <th class="std-type det" title="Produces objective measurable data for pricing and risk modeling">Det.</th>
-  <th class="std-type bridge" title="Builds infrastructure to price harder, currently uninsurable risks">Bridge</th>
+  <th class="std-type" style="color:var(--ink-2);" title="AC1 — Preventative: reduces probability of a covered event occurring">AC1</th>
+  <th class="std-type" style="color:var(--ink-2);" title="AC2 — Deterministic: produces objective measurable data that feeds pricing and risk modeling">AC2</th>
+  <th class="std-type" style="color:var(--ink-2);" title="AC3 — Bridge: builds data and infrastructure to price harder, currently uninsurable risks">AC3</th>
   <th class="std-src" title="AIUC-1 reference">AIUC-1</th>
   <th class="std-src" title="EU AI Act Code of Practice reference">CoP</th>
   <th class="std-src" title="Lab RSP / FSF reference">RSP/FSF</th>
 </tr>
 </thead>
 <tbody>
-<tr class="std-section"><td colspan="13">Section 1 — Reliability &amp; Availability</td></tr>
+<tr class="std-section"><td colspan="10">Section 1 — Reliability &amp; Availability</td></tr>
 <tr class="std-row">
-  <td class="std-id">H2-001</td>
+  <td class="std-id">AIUC2-001</td>
+  
   <td class="std-req">Independent uptime monitoring</td>
   <td class="std-def">AIUC-approved third-party service measures availability, error rate, and P95 latency on covered endpoints. Insurer has direct API read access at all times. Lab cannot be the sole source of any availability metric.</td>
-  <td class="std-type prev"></td>
-  <td class="std-type det"><span class='chk'>✓</span></td>
-  <td class="std-type bridge"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
   <td class="std-status" style="font-family:var(--mono);font-size:.68rem;color:var(--ink-2);text-align:center;vertical-align:top;">Mandatory</td>
   <td class="std-src">—</td>
   <td class="std-src">—</td>
   <td class="std-src">—</td>
 </tr>
 <tr class="std-row">
-  <td class="std-id">H2-002</td>
+  <td class="std-id">AIUC2-002</td>
+  
   <td class="std-req">Covered endpoint declaration</td>
   <td class="std-def">Lab declares all primary API endpoints in scope at inception; new endpoints notified within 30 days. Undisclosed endpoints excluded from coverage.</td>
-  <td class="std-type prev"></td>
-  <td class="std-type det"><span class='chk'>✓</span></td>
-  <td class="std-type bridge"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
   <td class="std-status" style="font-family:var(--mono);font-size:.68rem;color:var(--ink-2);text-align:center;vertical-align:top;">Mandatory</td>
   <td class="std-src">—</td>
   <td class="std-src">—</td>
   <td class="std-src">—</td>
 </tr>
 <tr class="std-row">
-  <td class="std-id">H2-003</td>
+  <td class="std-id">AIUC2-003</td>
+  
   <td class="std-req">Enterprise contract disclosure</td>
   <td class="std-def">All enterprise contracts with uptime commitments submitted to AIUC. AIUC approves against its minimum SLA floor schedule. Commitments exceeding the policy floor are the lab's uninsured residual exposure.</td>
-  <td class="std-type prev"><span class='chk'>✓</span></td>
-  <td class="std-type det"></td>
-  <td class="std-type bridge"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
   <td class="std-status" style="font-family:var(--mono);font-size:.68rem;color:var(--ink-2);text-align:center;vertical-align:top;">Mandatory</td>
   <td class="std-src">—</td>
   <td class="std-src">—</td>
   <td class="std-src">—</td>
 </tr>
 <tr class="std-row">
-  <td class="std-id">H2-004</td>
+  <td class="std-id">AIUC2-004</td>
+  
   <td class="std-req">SLA availability thresholds</td>
   <td class="std-def">Three-tier threshold structure set per-lab at inception based on the lab's baseline availability data: Tier 1 (notification), Tier 2 (remediation plan within 14 days), Tier 3 (immediate AIUC review and potential coverage suspension). Specific percentage values are placeholders pending AIUC portfolio data; provisional thresholds agreed at policy inception and reviewed annually. [Placeholder: T1 = TBD%, T2 = TBD%, T3 = TBD%]</td>
-  <td class="std-type prev"></td>
-  <td class="std-type det"><span class='chk'>✓</span></td>
-  <td class="std-type bridge"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
   <td class="std-status" style="font-family:var(--mono);font-size:.68rem;color:var(--ink-2);text-align:center;vertical-align:top;">Mandatory</td>
   <td class="std-src">—</td>
   <td class="std-src">II.12</td>
   <td class="std-src">—</td>
 </tr>
 <tr class="std-row">
-  <td class="std-id">H2-005</td>
+  <td class="std-id">AIUC2-005</td>
+  
   <td class="std-req">Benchmark suite declaration</td>
   <td class="std-def">Lab and AIUC jointly agree on named evaluations with version-locked methodology and countersigned baseline scores at inception. Covers both performance (drift) and factual accuracy (hallucination) domains. Suite cannot be modified without mutual written agreement.</td>
-  <td class="std-type prev"></td>
-  <td class="std-type det"><span class='chk'>✓</span></td>
-  <td class="std-type bridge"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
   <td class="std-status" style="font-family:var(--mono);font-size:.68rem;color:var(--ink-2);text-align:center;vertical-align:top;">Mandatory</td>
   <td class="std-src">—</td>
   <td class="std-src">II.2</td>
   <td class="std-src">—</td>
 </tr>
 <tr class="std-row">
-  <td class="std-id">H2-006</td>
+  <td class="std-id">AIUC2-006</td>
+  
   <td class="std-req">Benchmark evaluation and reporting</td>
   <td class="std-def">Full agreed benchmark suite run and results submitted to AIUC in structured format. Triggered on every model version change (within 24 hours of deployment) and on a fixed quarterly cadence. Deployments without submitted evaluation results are not covered.</td>
-  <td class="std-type prev"><span class='chk'>✓</span></td>
-  <td class="std-type det"><span class='chk'>✓</span></td>
-  <td class="std-type bridge"><span class='chk'>✓</span></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
   <td class="std-status" style="font-family:var(--mono);font-size:.68rem;color:var(--ink-2);text-align:center;vertical-align:top;">Mandatory</td>
   <td class="std-src">D001–D002</td>
   <td class="std-src">II.2</td>
   <td class="std-src">SB 53 §3 · RAISE §4</td>
 </tr>
 <tr class="std-row">
-  <td class="std-id">H2-007</td>
+  <td class="std-id">AIUC2-007</td>
+  
   <td class="std-req">Benchmark notification threshold</td>
   <td class="std-def">Benchmark score declines beyond the notification threshold on any agreed evaluation, sustained across 2 or more consecutive runs. Triggers mandatory AIUC disclosure within 48 hours. Applies to both performance (drift) and factual accuracy (hallucination) benchmark suites. Single-run declines that recover do not constitute a notification event. [Placeholder: notification threshold = TBD% decline from baseline, set per-lab at inception]</td>
-  <td class="std-type prev"></td>
-  <td class="std-type det"><span class='chk'>✓</span></td>
-  <td class="std-type bridge"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
   <td class="std-status" style="font-family:var(--mono);font-size:.68rem;color:var(--ink-2);text-align:center;vertical-align:top;">Mandatory</td>
   <td class="std-src">D001–D002</td>
   <td class="std-src">II.2</td>
   <td class="std-src">—</td>
 </tr>
 <tr class="std-row">
-  <td class="std-id">H2-008</td>
+  <td class="std-id">AIUC2-008</td>
+  
   <td class="std-req">Benchmark material failure threshold</td>
   <td class="std-def">Benchmark score declines beyond the material failure threshold on any agreed evaluation, OR falls below the agreed absolute floor, sustained across 2 or more consecutive runs. Triggers mandatory remediation plan submitted to AIUC within 30 days. Applies to both performance and factual accuracy suites. [Placeholder: material threshold = TBD% decline from baseline; absolute floor = TBD, both set per-lab at inception]</td>
-  <td class="std-type prev"></td>
-  <td class="std-type det"><span class='chk'>✓</span></td>
-  <td class="std-type bridge"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
   <td class="std-status" style="font-family:var(--mono);font-size:.68rem;color:var(--ink-2);text-align:center;vertical-align:top;">Mandatory</td>
   <td class="std-src">D001–D002</td>
   <td class="std-src">II.2</td>
   <td class="std-src">—</td>
 </tr>
 <tr class="std-row">
-  <td class="std-id">H2-009</td>
+  <td class="std-id">AIUC2-009</td>
+  
   <td class="std-req">Unannounced spot evaluation</td>
   <td class="std-def">AIUC or its accredited assessor may initiate a full benchmark run at any time without notice. Lab must cooperate within 48 hours. Results count equally with scheduled evaluations. Closes the strategic rollback loophole whereby labs game the scheduled cadence.</td>
-  <td class="std-type prev"><span class='chk'>✓</span></td>
-  <td class="std-type det"><span class='chk'>✓</span></td>
-  <td class="std-type bridge"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
   <td class="std-status" style="font-family:var(--mono);font-size:.68rem;color:var(--ink-2);text-align:center;vertical-align:top;">Mandatory</td>
   <td class="std-src">B001 · C010–C012 · D002</td>
   <td class="std-src">II.11</td>
   <td class="std-src">—</td>
 </tr>
-<tr class="std-section"><td colspan="13">Section 2 — Accountability &amp; Transparency</td></tr>
+<tr class="std-section"><td colspan="10">Section 2 — Accountability &amp; Transparency</td></tr>
 <tr class="std-row">
-  <td class="std-id">H2-010</td>
+  <td class="std-id">AIUC2-010</td>
+  
   <td class="std-req">Model activity logging</td>
   <td class="std-def">All covered endpoint outputs logged: timestamp, model version, session ID, input hash. PII-scrubbed; 12-month minimum retention; retrievable by AIUC within 48 hours of a coverage event.</td>
-  <td class="std-type prev"></td>
-  <td class="std-type det"><span class='chk'>✓</span></td>
-  <td class="std-type bridge"><span class='chk'>✓</span></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
   <td class="std-status" style="font-family:var(--mono);font-size:.68rem;color:var(--ink-2);text-align:center;vertical-align:top;">Mandatory</td>
   <td class="std-src">E015</td>
   <td class="std-src">II.8</td>
   <td class="std-src">SB 53 §3 · EU Art. 19</td>
 </tr>
 <tr class="std-row">
-  <td class="std-id">H2-011</td>
+  <td class="std-id">AIUC2-011</td>
+  
   <td class="std-req">Incident structured log</td>
   <td class="std-def">Structured report submitted within 7 days of resolution for any Tier 2+ event: timestamp, duration, tier breached, root cause (AIUC taxonomy), affected endpoints, estimated affected customer count, remediation taken.</td>
-  <td class="std-type prev"></td>
-  <td class="std-type det"><span class='chk'>✓</span></td>
-  <td class="std-type bridge"><span class='chk'>✓</span></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
   <td class="std-status" style="font-family:var(--mono);font-size:.68rem;color:var(--ink-2);text-align:center;vertical-align:top;">Mandatory</td>
   <td class="std-src">E001–E003</td>
   <td class="std-src">II.12</td>
   <td class="std-src">SB 53 §6 · EU Art. 73</td>
 </tr>
 <tr class="std-row">
-  <td class="std-id">H2-012</td>
+  <td class="std-id">AIUC2-012</td>
+  
   <td class="std-req">Serious incident reporting</td>
   <td class="std-def">Tier 3 breaches, security incidents, and warranty breaches reported to AIUC within 24 hours of detection, prior to resolution. Deferral pending internal investigation not permitted.</td>
-  <td class="std-type prev"></td>
-  <td class="std-type det"></td>
-  <td class="std-type bridge"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
   <td class="std-status" style="font-family:var(--mono);font-size:.68rem;color:var(--ink-2);text-align:center;vertical-align:top;">Mandatory</td>
   <td class="std-src">E001</td>
   <td class="std-src">II.12</td>
   <td class="std-src">EU Art. 73</td>
 </tr>
 <tr class="std-row">
-  <td class="std-id">H2-013</td>
+  <td class="std-id">AIUC2-013</td>
+  
   <td class="std-req">AI failure response plans</td>
   <td class="std-def">Documented response plans for: (a) security breaches, (b) harmful outputs, (c) hallucination events. Each covers detection, escalation, AIUC notification, customer communication, and remediation. Updated annually.</td>
-  <td class="std-type prev"><span class='chk'>✓</span></td>
-  <td class="std-type det"></td>
-  <td class="std-type bridge"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
   <td class="std-status" style="font-family:var(--mono);font-size:.68rem;color:var(--ink-2);text-align:center;vertical-align:top;">Mandatory</td>
   <td class="std-src">E001–E003</td>
   <td class="std-src">II.6</td>
   <td class="std-src">—</td>
 </tr>
 <tr class="std-row">
-  <td class="std-id">H2-014</td>
+  <td class="std-id">AIUC2-014</td>
+  
   <td class="std-req">Named accountability officer</td>
   <td class="std-def">Lab designates a named AIUC Compliance Officer with authority to commit the lab to remediation obligations. Updated within 14 days of any change.</td>
-  <td class="std-type prev"><span class='chk'>✓</span></td>
-  <td class="std-type det"></td>
-  <td class="std-type bridge"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
   <td class="std-status" style="font-family:var(--mono);font-size:.68rem;color:var(--ink-2);text-align:center;vertical-align:top;">Mandatory</td>
   <td class="std-src">E004</td>
   <td class="std-src">II.10</td>
   <td class="std-src">—</td>
 </tr>
 <tr class="std-row">
-  <td class="std-id">H2-015</td>
+  <td class="std-id">AIUC2-015</td>
+  
   <td class="std-req">Third-party component disclosure</td>
   <td class="std-def">All third-party AI components in coverage scope documented annually. Must meet equivalent AIUC requirements or be explicitly excluded. Material changes notified within 30 days.</td>
-  <td class="std-type prev"><span class='chk'>✓</span></td>
-  <td class="std-type det"></td>
-  <td class="std-type bridge"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
   <td class="std-status" style="font-family:var(--mono);font-size:.68rem;color:var(--ink-2);text-align:center;vertical-align:top;">Mandatory</td>
   <td class="std-src">E006</td>
   <td class="std-src">II.10</td>
   <td class="std-src">—</td>
 </tr>
 <tr class="std-row">
-  <td class="std-id">H2-016</td>
+  <td class="std-id">AIUC2-016</td>
+  
   <td class="std-req">Regulatory compliance documentation</td>
   <td class="std-def">Compliance status with EU AI Act, SB 53, RAISE, and applicable equivalents maintained. Material regulatory findings or enforcement actions disclosed within 30 days.</td>
-  <td class="std-type prev"><span class='chk'>✓</span></td>
-  <td class="std-type det"></td>
-  <td class="std-type bridge"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
   <td class="std-status" style="font-family:var(--mono);font-size:.68rem;color:var(--ink-2);text-align:center;vertical-align:top;">Mandatory</td>
   <td class="std-src">E012</td>
   <td class="std-src">II.14</td>
   <td class="std-src">SB 53 · RAISE</td>
 </tr>
 <tr class="std-row">
-  <td class="std-id">H2-017</td>
+  <td class="std-id">AIUC2-017</td>
+  
   <td class="std-req">Model card and capability disclosure</td>
   <td class="std-def">Model card in AIUC schema updated within 30 days of any material change. Required fields: capability claims, eval methodology, known failure modes, intended and out-of-scope uses. Constitutes a warranted representation.</td>
-  <td class="std-type prev"><span class='chk'>✓</span></td>
-  <td class="std-type det"><span class='chk'>✓</span></td>
-  <td class="std-type bridge"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
   <td class="std-status" style="font-family:var(--mono);font-size:.68rem;color:var(--ink-2);text-align:center;vertical-align:top;">Mandatory</td>
   <td class="std-src">E017</td>
   <td class="std-src">II.8 · II.16</td>
   <td class="std-src">EU Art. 13</td>
 </tr>
 <tr class="std-row">
-  <td class="std-id">H2-018</td>
+  <td class="std-id">AIUC2-018</td>
+  
   <td class="std-req">Pre-deployment testing documentation</td>
   <td class="std-def">Pre-deployment testing against agreed benchmark suite documented before any model version change. Results submitted with version-change notification. Undocumented deployments not covered.</td>
-  <td class="std-type prev"><span class='chk'>✓</span></td>
-  <td class="std-type det"></td>
-  <td class="std-type bridge"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
   <td class="std-status" style="font-family:var(--mono);font-size:.68rem;color:var(--ink-2);text-align:center;vertical-align:top;">Mandatory</td>
   <td class="std-src">C002</td>
   <td class="std-src">II.2</td>
   <td class="std-src">SB 53 §3 · RAISE §4</td>
 </tr>
-<tr class="std-section"><td colspan="13">Section 3 — Optional: Bridge Data Sharing</td></tr>
+<tr class="std-section"><td colspan="10">Section 3 — Optional: Bridge Data Sharing</td></tr>
 <tr class="std-row">
-  <td class="std-id">H2-023</td>
+  <td class="std-id">AIUC2-019</td>
+  
   <td class="std-req">Dangerous capability probe results</td>
   <td class="std-def">CBRN uplift, offensive cyber, and persuasion/manipulation eval results shared with AIUC under NDA on version-change and quarterly cadence. Pass/fail and score vs. threshold only; raw prompts not shared.</td>
-  <td class="std-type prev"></td>
-  <td class="std-type det"><span class='chk'>✓</span></td>
-  <td class="std-type bridge"><span class='chk'>✓</span></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
   <td class="std-status" style="font-family:var(--mono);font-size:.68rem;color:var(--ink-3);text-align:center;vertical-align:top;">Optional</td>
   <td class="std-src">B001 · C010</td>
   <td class="std-src">II.2 · II.3 · II.5</td>
   <td class="std-src">SB 53 §3 · RAISE §4 · Anthropic RSP · OAI RSP · GDM FSF</td>
 </tr>
 <tr class="std-row">
-  <td class="std-id">H2-024</td>
+  <td class="std-id">AIUC2-020</td>
+  
   <td class="std-req">Capability trajectory reporting</td>
   <td class="std-def">Quarterly structured summary of capability scores across agreed domains over prior four model versions. Enables AIUC to price rate of capability change, not just current level.</td>
-  <td class="std-type prev"></td>
-  <td class="std-type det"><span class='chk'>✓</span></td>
-  <td class="std-type bridge"><span class='chk'>✓</span></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
   <td class="std-status" style="font-family:var(--mono);font-size:.68rem;color:var(--ink-3);text-align:center;vertical-align:top;">Optional</td>
   <td class="std-src">—</td>
   <td class="std-src">II.2 · II.4</td>
   <td class="std-src">Anthropic RSP · OAI RSP · GDM FSF</td>
 </tr>
 <tr class="std-row">
-  <td class="std-id">H2-025</td>
+  <td class="std-id">AIUC2-021</td>
+  
   <td class="std-req">Refusal and safety filter telemetry</td>
   <td class="std-def">Aggregate refusal counts by category (CBRN, cyber, harmful content, self-harm, other) shared monthly. No content shared. Enables portfolio-level base rate estimation for capability and harmful output risks.</td>
-  <td class="std-type prev"></td>
-  <td class="std-type det"><span class='chk'>✓</span></td>
-  <td class="std-type bridge"><span class='chk'>✓</span></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
   <td class="std-status" style="font-family:var(--mono);font-size:.68rem;color:var(--ink-3);text-align:center;vertical-align:top;">Optional</td>
   <td class="std-src">C007–C008</td>
   <td class="std-src">II.4</td>
   <td class="std-src">EU Art. 9 · RAISE §5</td>
 </tr>
 <tr class="std-row">
-  <td class="std-id">H2-026</td>
+  <td class="std-id">AIUC2-022</td>
+  
   <td class="std-req">Annual red team summary</td>
   <td class="std-def">Annual adversarial testing by AIUC-accredited assessor. Structured summary under NDA: domains tested, severity distribution, prior-year remediation status. Raw attack content not shared.</td>
-  <td class="std-type prev"><span class='chk'>✓</span></td>
-  <td class="std-type det"><span class='chk'>✓</span></td>
-  <td class="std-type bridge"><span class='chk'>✓</span></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
   <td class="std-status" style="font-family:var(--mono);font-size:.68rem;color:var(--ink-3);text-align:center;vertical-align:top;">Optional</td>
   <td class="std-src">B001 · C010–C012</td>
   <td class="std-src">II.6 · II.7 · II.11</td>
   <td class="std-src">SB 53 §5 · RAISE §6 · EU Art. 9</td>
 </tr>
 <tr class="std-row">
-  <td class="std-id">H2-027</td>
-  <td class="std-req"></td>
-  <td class="std-def"></td>
-  <td class="std-type prev"></td>
-  <td class="std-type det"></td>
-  <td class="std-type bridge"></td>
-  <td class="std-status optional"></td>
-  <td class="std-src"></td>
-  <td class="std-src"></td>
-  <td class="std-src"></td>
-</tr>
-<tr class="std-row">
-  <td class="std-id">H2-028</td>
+  <td class="std-id">AIUC2-023</td>
+  
   <td class="std-req">Agentic action logs</td>
   <td class="std-def">For agentic deployments: aggregate monthly statistics on tool calls, scope adherence, outcomes, and human approval rates. No individual session content shared.</td>
-  <td class="std-type prev"></td>
-  <td class="std-type det"><span class='chk'>✓</span></td>
-  <td class="std-type bridge"><span class='chk'>✓</span></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
   <td class="std-status" style="font-family:var(--mono);font-size:.68rem;color:var(--ink-3);text-align:center;vertical-align:top;">Optional</td>
   <td class="std-src">B006 · D003–D004</td>
   <td class="std-src">II.2</td>
   <td class="std-src">SB 53 §3 · RAISE §4</td>
 </tr>
-<tr class="std-section"><td colspan="13">Section 4 — Governance Framework</td></tr>
+<tr class="std-section"><td colspan="10">Section 4 — Governance Framework</td></tr>
 <tr class="std-row">
-  <td class="std-id">H2-029</td>
+  <td class="std-id">AIUC2-024</td>
+  
   <td class="std-req">Safety and security framework</td>
   <td class="std-def">Lab maintains a documented board-level safety and security framework covering governance structure, escalation paths, and accountability for AI risk. Submitted to AIUC at inception and reviewed annually.</td>
-  <td class="std-type prev"><span class='chk'>✓</span></td>
-  <td class="std-type det"></td>
-  <td class="std-type bridge"><span class='chk'>✓</span></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
   <td class="std-status" style="font-family:var(--mono);font-size:.68rem;color:var(--ink-2);text-align:center;vertical-align:top;">Mandatory</td>
   <td class="std-src">—</td>
   <td class="std-src">II.1</td>
   <td class="std-src">Anthropic RSP · OAI RSP · GDM FSF</td>
 </tr>
 <tr class="std-row">
-  <td class="std-id">H2-030</td>
+  <td class="std-id">AIUC2-025</td>
+  
   <td class="std-req">Systemic risk identification methodology</td>
   <td class="std-def">Lab documents its methodology for identifying which model capabilities constitute systemic risks at each version change. Findings submitted to AIUC as part of version-change notification.</td>
-  <td class="std-type prev"><span class='chk'>✓</span></td>
-  <td class="std-type det"><span class='chk'>✓</span></td>
-  <td class="std-type bridge"><span class='chk'>✓</span></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
   <td class="std-status" style="font-family:var(--mono);font-size:.68rem;color:var(--ink-2);text-align:center;vertical-align:top;">Mandatory</td>
   <td class="std-src">C001</td>
   <td class="std-src">II.3</td>
   <td class="std-src">SB 53 §3 · RAISE §4 · Anthropic RSP · OAI RSP · GDM FSF</td>
 </tr>
 <tr class="std-row">
-  <td class="std-id">H2-031</td>
+  <td class="std-id">AIUC2-026</td>
+  
   <td class="std-req">Risk acceptance determination process</td>
   <td class="std-def">Lab documents the criteria, evidence, and named individual or committee with authority to accept systemic risks above defined thresholds. Submitted at inception and updated on each version change.</td>
-  <td class="std-type prev"><span class='chk'>✓</span></td>
-  <td class="std-type det"><span class='chk'>✓</span></td>
-  <td class="std-type bridge"><span class='chk'>✓</span></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
   <td class="std-status" style="font-family:var(--mono);font-size:.68rem;color:var(--ink-2);text-align:center;vertical-align:top;">Mandatory</td>
   <td class="std-src">—</td>
   <td class="std-src">II.5</td>
   <td class="std-src">Anthropic RSP · OAI RSP · GDM FSF</td>
 </tr>
 <tr class="std-row">
-  <td class="std-id">H2-032</td>
+  <td class="std-id">AIUC2-027</td>
+  
   <td class="std-req">Non-retaliation policy</td>
   <td class="std-def">Lab maintains a documented non-retaliation policy for individuals reporting AI safety concerns internally or to external bodies including AIUC. Submitted at inception; updated on material change.</td>
-  <td class="std-type prev"><span class='chk'>✓</span></td>
-  <td class="std-type det"></td>
-  <td class="std-type bridge"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;">✓</td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
+  <td class="std-type" style="text-align:center;vertical-align:middle;"></td>
   <td class="std-status" style="font-family:var(--mono);font-size:.68rem;color:var(--ink-2);text-align:center;vertical-align:top;">Mandatory</td>
   <td class="std-src">—</td>
   <td class="std-src">II.13</td>
@@ -789,7 +826,6 @@ td.as .chk{color:#854F0B}
 </tr>
 </tbody></table>
   </div>
-  <p class="table-caption">Table 4: AIUC-2 standard for Reliability/Accountability. MH = moral hazard control; AS = adverse selection control. Hover column headers for definitions.</p>
 
   <h3 id="sec-2-1">2.1 Reporting Cadence</h3>
 
@@ -798,13 +834,16 @@ td.as .chk{color:#854F0B}
   </div>
 
   <h3 id="sec-2-2">2.2 Operating Conditions</h3>
-  <p class="doc-prose">The following policy terms apply to all covered risks and sit outside the requirements schedule. They are structural features of the insurance contract designed to counter moral hazard (MH) and adverse selection (AS).</p>
+  <p class="doc-prose">The following operating conditions (OC) apply to all covered risks and sit outside the requirements schedule. They are structural features of the insurance contract designed to counter moral hazard (MH) and adverse selection (AS).</p>
 
+  <p class="table-label">Table 6</p>
+  <p class="table-title">Operating conditions (OC1–OC4)</p>
   <div style="border:1px solid var(--rule);border-radius:4px;background:var(--surface);overflow:hidden;max-width:960px;margin-bottom:1.5rem;">
     <table style="width:100%;border-collapse:collapse;font-size:.82rem;">
       <thead>
         <tr style="border-bottom:2px solid var(--ink);">
-          <th style="font-family:var(--mono);font-size:.62rem;font-weight:500;color:var(--ink-2);padding:.6rem .9rem;text-align:left;width:180px;">#</th>
+          <th style="font-family:var(--mono);font-size:.62rem;font-weight:500;color:var(--ink-2);padding:.6rem .5rem;text-align:center;width:48px;">#</th>
+          <th style="font-family:var(--mono);font-size:.62rem;font-weight:500;color:var(--ink-2);padding:.6rem .9rem;text-align:left;">Mechanism</th>
           <th style="font-family:var(--mono);font-size:.62rem;font-weight:500;color:var(--ink-2);padding:.6rem .9rem;text-align:left;">Description</th>
           <th style="font-family:var(--mono);font-size:.62rem;font-weight:500;color:#3C3489;padding:.6rem .5rem;text-align:center;width:48px;" title="Reduces risk that coverage weakens the lab's incentive to prevent losses">MH</th>
           <th style="font-family:var(--mono);font-size:.62rem;font-weight:500;color:#854F0B;padding:.6rem .5rem;text-align:center;width:48px;" title="Reduces risk that labs with worse profiles preferentially seek coverage">AS</th>
@@ -812,33 +851,36 @@ td.as .chk{color:#854F0B}
       </thead>
       <tbody>
         <tr style="border-bottom:1px solid var(--rule-2);">
-          <td style="padding:.65rem .9rem;font-weight:500;">OC1 · Co-insurance retention</td>
+          <td style="padding:.65rem .5rem;font-family:var(--mono);font-size:.68rem;font-weight:500;color:var(--ink-3);text-align:center;white-space:nowrap;">OC1</td>
+          <td style="padding:.65rem .9rem;font-weight:500;">Co-insurance retention</td>
           <td style="padding:.65rem .9rem;color:var(--ink-2);">Lab retains a fixed share of every loss, regardless of claim size, tier, or cause. Cannot be reduced through purchase of additional coverage from AIUC or any affiliate.</td>
-          <td style="padding:.65rem .5rem;text-align:center;background:#EEEDFE;"><span style="color:#3C3489;font-size:1rem;">✓</span></td>
-          <td style="padding:.65rem .5rem;text-align:center;background:#FCE8D5;"></td>
+          <td style="padding:.65rem .5rem;text-align:center;"><span style="color:#3C3489;font-size:1rem;">✓</span></td>
+          <td style="padding:.65rem .5rem;text-align:center;"></td>
         </tr>
         <tr style="border-bottom:1px solid var(--rule-2);">
-          <td style="padding:.65rem .9rem;font-weight:500;">OC2 · Annual aggregate cap</td>
+          <td style="padding:.65rem .5rem;font-family:var(--mono);font-size:.68rem;font-weight:500;color:var(--ink-3);text-align:center;white-space:nowrap;">OC2</td>
+          <td style="padding:.65rem .9rem;font-weight:500;">Annual aggregate cap</td>
           <td style="padding:.65rem .9rem;color:var(--ink-2);">Coverage ends once the annual limit is exhausted; higher limits cost more. The aggregate limit is set at inception based on covered enterprise exposure.</td>
-          <td style="padding:.65rem .5rem;text-align:center;background:#EEEDFE;"><span style="color:#3C3489;font-size:1rem;">✓</span></td>
-          <td style="padding:.65rem .5rem;text-align:center;background:#FCE8D5;"><span style="color:#854F0B;font-size:1rem;">✓</span></td>
+          <td style="padding:.65rem .5rem;text-align:center;"><span style="color:#3C3489;font-size:1rem;">✓</span></td>
+          <td style="padding:.65rem .5rem;text-align:center;"><span style="color:#854F0B;font-size:1rem;">✓</span></td>
         </tr>
         <tr style="border-bottom:1px solid var(--rule-2);">
-          <td style="padding:.65rem .9rem;font-weight:500;">OC3 · Seasoning period</td>
+          <td style="padding:.65rem .5rem;font-family:var(--mono);font-size:.68rem;font-weight:500;color:var(--ink-3);text-align:center;white-space:nowrap;">OC3</td>
+          <td style="padding:.65rem .9rem;font-weight:500;">Seasoning period</td>
           <td style="padding:.65rem .9rem;color:var(--ink-2);">New labs start with partial coverage; full limits begin only after 6 compliant months. A Tier 2 or above breach during the seasoning period restarts the clock.</td>
-          <td style="padding:.65rem .5rem;text-align:center;background:#EEEDFE;"></td>
-          <td style="padding:.65rem .5rem;text-align:center;background:#FCE8D5;"><span style="color:#854F0B;font-size:1rem;">✓</span></td>
+          <td style="padding:.65rem .5rem;text-align:center;"></td>
+          <td style="padding:.65rem .5rem;text-align:center;"><span style="color:#854F0B;font-size:1rem;">✓</span></td>
         </tr>
         <tr>
-          <td style="padding:.65rem .9rem;font-weight:500;">OC4 · Experience-rated renewal</td>
+          <td style="padding:.65rem .5rem;font-family:var(--mono);font-size:.68rem;font-weight:500;color:var(--ink-3);text-align:center;white-space:nowrap;">OC4</td>
+          <td style="padding:.65rem .9rem;font-weight:500;">Experience-rated renewal</td>
           <td style="padding:.65rem .9rem;color:var(--ink-2);">Renewal pricing adjusts based on breach frequency and severity, benchmark trajectory across four quarters, the delta between announced and unannounced evaluation results, remediation speed, and exposure changes.</td>
-          <td style="padding:.65rem .5rem;text-align:center;background:#EEEDFE;"><span style="color:#3C3489;font-size:1rem;">✓</span></td>
-          <td style="padding:.65rem .5rem;text-align:center;background:#FCE8D5;"><span style="color:#854F0B;font-size:1rem;">✓</span></td>
+          <td style="padding:.65rem .5rem;text-align:center;"><span style="color:#3C3489;font-size:1rem;">✓</span></td>
+          <td style="padding:.65rem .5rem;text-align:center;"><span style="color:#854F0B;font-size:1rem;">✓</span></td>
         </tr>
       </tbody>
     </table>
   </div>
-  <p class="table-caption">Table 5: Operating conditions to protect against moral hazard (MH) and adverse selection (AS).</p>
 
   <h3 id="sec-2-3">2.3 Red Lines</h3>
   <p class="doc-prose">The following constitute coverage-voiding warranty breaches. Any claim arising during a period in which a red line was in effect is excluded from coverage, regardless of whether the breach was disclosed.</p>
