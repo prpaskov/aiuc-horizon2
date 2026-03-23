@@ -1108,7 +1108,7 @@ function mechQuick(type){
 
 GROUPS.forEach(g=>{
   html+=`<tr class="parent-row" data-gid="${g.id}">
-    <td class="pr-name" colspan="2"><span class="toggle-icon">▶</span>${g.name}</td>
+    <td class="pr-name" colspan="1"><span class="toggle-icon">▶</span>${g.name}</td>
     <td class="pr-meta gi" colspan="8">click to expand · hover chips for criteria detail</td>
     <td class="pr-meta gs" colspan="4">${g.scenarios.length} scenario${g.scenarios.length>1?'s':''}</td>
     <td class="pr-meta gf" colspan="6"></td>
@@ -1117,15 +1117,11 @@ GROUPS.forEach(g=>{
     const fns=scenFns(sc.fw);
     html+=`<tr class="scenario-row hidden" data-gid="${g.id}" data-sid="${sc.id}" data-fns="${fns}">
       <td class="sn-name"><div class="sn-primary">${sc.name}</div>${sc.sub?`<div class="sn-sub">${sc.sub}</div>`:''}<div class="sn-group-tag" style="display:none;font-family:var(--mono);font-size:.55rem;color:var(--ink-3);margin-top:2px;letter-spacing:.04em;">${g.name}</div></td>
-      <td style="text-align:center;padding:.3rem .3rem;">${mechQuick(sc.mech.type)}</td>
       ${sc.dims.map((v,i)=>`<td class="gi">${chip(v,DL[i],sc.tips[i])}</td>`).join('')}
       <td class="gs"><span class="sv sv-${sc.scores.rc}">${sc.scores.r1}</span></td>
       <td class="gs"><span class="sv sv-${sc.scores.sc}">${sc.scores.sb}</span></td>
       <td class="gs"><span class="sv sv-${sc.scores.wc}">${sc.scores.wtd}</span></td>
       <td class="gs"><span class="sv sv-${sc.scores.uc}">${sc.scores.uwtd}</span></td>
-      <td class="gc">${covTags(sc.existing)}</td>
-      <td class="gc"><span class="gap-badge gap-${sc.gap}">${sc.gapLabel}</span></td>
-      <td class="gc"><span class="mkt-badge mkt-${sc.mkt}">${sc.mktLabel}</span></td>
       ${FW_NAMES.map((_,fi)=>`<td class="gf">${dotGrid(sc.fw,fi,sc.id)}</td>`).join('')}
     </tr>`;
     html+=`<tr class="mechanism-row hidden" data-gid="${g.id}" data-sid="${sc.id}"><td colspan="19">${mechPanel(sc.mech)}</td></tr>`;
